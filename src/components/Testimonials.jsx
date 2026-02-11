@@ -4,20 +4,21 @@ import SectionHeader from './SectionHeader';
 const Testimonials = (props) => {
   const testimonials = [
     {
-      quote:
-        'We were playing within five minutes. Everyone just grabbed their phones and jumped in.',
-      name: 'Jenna L. — Family Game Night',
+      quote: 'This is literally so much fun! Where has this been all my life?',
+      name: 'Susannah',
     },
     {
-      quote:
-        'Calibration was quick and the motion felt smooth. It really feels like a living-room setup.',
-      name: 'Marcus T. — Retro Fan',
+      quote: 'Once I got used to holding a phone instead of a controller, it felt just like I remembered!',
+      name: 'Josh',
     },
     {
-      quote:
-        'No extra controllers to buy, no pile of cables. Just phones and a big screen.',
-      name: 'Riley P. — Party Host',
+      quote: 'How has no one else made this yet?',
+      name: 'Trey',
     },
+    {
+      quote: 'Oh my gosh, this brings back so many good memories.',
+      name: 'Price',
+    }
   ];
   return (
     <section class="section" id="testimonials">
@@ -31,7 +32,7 @@ const Testimonials = (props) => {
             {(entry) => (
               <div class="card">
                 <p class="quote">“{entry.quote}”</p>
-                <p class="person">{entry.name}</p>
+                <p class="person">— {entry.name}</p>
               </div>
             )}
           </For>

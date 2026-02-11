@@ -4,6 +4,9 @@ const Hero = (props) => {
       <div>
         <h1>Turn every phone into a motion controller.</h1>
         <p>
+          Bring back the motion-controlled living-room games many families grew up with — now powered by your PC and controlled by smartphones.
+        </p>
+        <p>
           BeckerBox makes your PC feel like a living-room console. Pair in a tap,
           calibrate in seconds, and start playing together with the phones you already have.
         </p>

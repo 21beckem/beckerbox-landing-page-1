@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Slideshow from './components/Slideshow';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import Compatibility from './components/Compatibility';
@@ -18,6 +19,7 @@ const App = () => {
         demoHref="https://r.box.beckersuite.com/v2/host/"
         imageSrc="/images/beckerbox-hero.png"
       />
+      <Slideshow />
       <HowItWorks />
       <Features />
       <Compatibility />
