@@ -73,7 +73,7 @@ button {
 }
 
 .page::after {
-  bottom: -180px;
+  bottom: 0px;
   left: -140px;
   background: radial-gradient(circle, rgba(66, 150, 255, 0.22), transparent 70%);
 }

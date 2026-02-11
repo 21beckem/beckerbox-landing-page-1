@@ -1,5 +1,5 @@
-import { For } from 'solid-js';
-import PricingCard from './Comp';
+import { For, onMount } from 'solid-js';
+import PricingCard from './components/PricingCard';
 
 const App = () => {
   const steps = [
