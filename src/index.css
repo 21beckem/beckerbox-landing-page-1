@@ -409,6 +409,58 @@ button {
   gap: 18px;
 }
 
+.faq-accordion {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(15, 28, 22, 0.12);
+  box-shadow: 0 10px 30px rgba(10, 40, 25, 0.08);
+  padding: 6px 18px;
+}
+
+.faq-trigger {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 18px 32px 18px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  position: relative;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.faq-trigger::after {
+  content: '>';
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 1.1rem;
+  color: var(--muted);
+  transition: transform 0.2s;
+}
+
+.faq-trigger[aria-expanded='true']::after {
+  transform: translateY(-50%) rotate(-90deg);
+  color: var(--green-dark);
+}
+
+.faq-panel {
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.faq-panel-inner {
+  padding: 0 8px 18px 0;
+  color: var(--muted);
+}
+
 .footer {
   padding: 50px 0 70px;
   border-top: 1px solid rgba(15, 28, 22, 0.08);
