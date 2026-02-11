@@ -33,7 +33,9 @@ const App = () => {
       period: 'browser',
       description: 'Try the core experience in your browser and test pairing.',
       bullets: ['One remote connection', 'Basic calibration', 'Instant launch'],
-      cta: 'View Demo',
+      cta: 'Launch Demo',
+      href: 'https://r.box.beckersuite.com/v2/host/',
+      external: true,
       highlight: false,
       comingSoon: false,
       tag: 'Free',
@@ -45,6 +47,7 @@ const App = () => {
       description: 'Unlock the full desktop hub with short ads between sessions.',
       bullets: ['Up to 2 remotes', 'Ad-supported sessions', 'Cloud pairing profiles'],
       cta: 'Coming Soon',
+      href: '#pricing',
       highlight: false,
       comingSoon: true,
       tag: 'Coming Soon',
@@ -56,6 +59,7 @@ const App = () => {
       description: 'The premium experience for families and couch co-op nights.',
       bullets: ['Up to 4 remotes', 'No ads', 'Priority setup support'],
       cta: 'Purchase',
+      href: '#pricing',
       highlight: true,
       comingSoon: false,
       tag: 'Best Value',
@@ -101,18 +105,21 @@ const App = () => {
 
   return (
     <div class="page">
-      <header class="container nav">
-        <div class="logo">
-          <span aria-hidden="true" />
-          BeckerBox
+      <header class="nav-wrap">
+        <div class="container nav">
+          <div class="logo">
+            <span aria-hidden="true" />
+            BeckerBox
+          </div>
+          <nav class="nav-links">
+            <a href="#how">How It Works</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+          </nav>
         </div>
-        <nav class="nav-links">
-          <a href="#how">How It Works</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-        </nav>
       </header>
+      <div class="nav-spacer"></div>
 
       <section class="container hero">
         <div>
@@ -123,7 +130,14 @@ const App = () => {
           </p>
           <div class="hero-cta">
             <a class="btn primary" href="#pricing">Purchase</a>
-            <a class="btn ghost" href="#pricing">View Demo</a>
+            <a
+              class="btn ghost"
+              href="https://r.box.beckersuite.com/v2/host/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Launch Demo
+            </a>
           </div>
           <p class="hero-note">
             Works with iOS and Android. No bundled games or firmware — you use the titles you own.
@@ -131,8 +145,8 @@ const App = () => {
         </div>
         <div class="hero-media">
           <img
-            src="/beckerbox-ui.png"
-            alt="BeckerBox pairing screen"
+            src="/images/beckerbox-hero.png"
+            alt="BeckerBox app screenshot"
             loading="lazy"
           />
         </div>
@@ -216,6 +230,8 @@ const App = () => {
                   description={tier.description}
                   bullets={tier.bullets}
                   cta={tier.cta}
+                  href={tier.href}
+                  external={tier.external}
                   highlight={tier.highlight}
                   comingSoon={tier.comingSoon}
                   tag={tier.tag}

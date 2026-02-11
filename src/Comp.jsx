@@ -1,6 +1,7 @@
 import { For } from 'solid-js';
 
 const PricingCard = (props) => {
+  const href = () => props.href || '#pricing';
   return (
     <div
       classList={{
@@ -22,7 +23,9 @@ const PricingCard = (props) => {
       <div class="hero-cta">
         <a
           class="btn primary"
-          href="#pricing"
+          href={href()}
+          target={props.external ? '_blank' : undefined}
+          rel={props.external ? 'noreferrer' : undefined}
           aria-disabled={props.comingSoon ? 'true' : 'false'}
         >
           {props.cta}
