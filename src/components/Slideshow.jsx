@@ -35,11 +35,14 @@ const Slideshow = () => {
   const [activeIndex, setActiveIndex] = createSignal(0);
 
   createEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % slides().length);
+    const length = slides().length;
+    activeIndex();
+
+    const timer = setTimeout(() => {
+      setActiveIndex((current) => (current + 1) % length);
     }, 7000);
 
-    onCleanup(() => clearInterval(timer));
+    onCleanup(() => clearTimeout(timer));
   });
 
   const goTo = (index) => {
@@ -70,7 +73,6 @@ const Slideshow = () => {
             </div>
           </div>
           <div class="slideshow-content">
-            {current().title ? <p class="slideshow-kicker">In the spotlight</p> : null}
             {current().title ? <h2>{current().title}</h2> : null}
             {current().description ? (
               <p class="slideshow-copy">{current().description}</p>

@@ -248,7 +248,7 @@ button {
 
 .slideshow-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 0.7fr);
   gap: 32px;
   align-items: center;
   background: rgba(255, 255, 255, 0.7);
@@ -274,7 +274,7 @@ button {
 .slideshow-viewport {
   border-radius: var(--radius);
   overflow: hidden;
-  min-height: 360px;
+  min-height: 460px;
   position: relative;
   background: #0f1c16;
   display: flex;
@@ -638,7 +638,7 @@ button {
   }
 
   .slideshow-viewport {
-    min-height: 300px;
+    min-height: 360px;
   }
 
   .grid-3,
