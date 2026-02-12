@@ -1,7 +1,7 @@
 import { For } from 'solid-js';
+import PurchaseBtn from './PurchaseBtn';
 
 const PricingCard = (props) => {
-  const href = () => props.href || '#pricing';
   return (
     <div
       classList={{
@@ -21,15 +21,14 @@ const PricingCard = (props) => {
         <For each={props.bullets}>{(item) => <li>{item}</li>}</For>
       </ul>
       <div class="hero-cta">
-        <a
+        <PurchaseBtn
           class="btn primary"
-          href={href()}
           target={props.external ? '_blank' : undefined}
           rel={props.external ? 'noreferrer' : undefined}
           aria-disabled={props.comingSoon ? 'true' : 'false'}
-        >
-          {props.cta}
-        </a>
+          product={props.product}
+          text={props.cta}
+        />
       </div>
     </div>
   );

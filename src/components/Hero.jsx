@@ -13,7 +13,7 @@ const Hero = (props) => {
           calibrate in seconds, and start playing together with the phones you already have.
         </p> */}
         <div class="hero-cta">
-          <PurchaseBtn />
+          <PurchaseBtn product="ilf1s" />
           <a
             class="btn ghost"
             href={props.demoHref}

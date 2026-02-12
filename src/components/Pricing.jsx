@@ -24,7 +24,6 @@ const Pricing = (props) => {
       description: 'Unlock the full desktop hub with short ads between sessions.',
       bullets: ['Up to 2 remotes', 'Ad-supported sessions', 'Cloud pairing profiles'],
       cta: 'Coming Soon',
-      href: '#pricing',
       highlight: false,
       comingSoon: true,
       tag: 'Coming Soon',
@@ -36,7 +35,7 @@ const Pricing = (props) => {
       description: 'The premium experience for families and couch co-op nights.',
       bullets: ['Up to 4 remotes', 'No ads', 'Priority setup support'],
       cta: 'Purchase',
-      href: '#pricing',
+      product: 'ilf1s',
       highlight: true,
       comingSoon: false,
       tag: 'Best Value',
@@ -59,7 +58,7 @@ const Pricing = (props) => {
                 description={tier.description}
                 bullets={tier.bullets}
                 cta={tier.cta}
-                href={tier.href}
+                product={tier.product}
                 external={tier.external}
                 highlight={tier.highlight}
                 comingSoon={tier.comingSoon}
