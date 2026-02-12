@@ -1,3 +1,5 @@
+import PurchaseBtn from "./PurchaseBtn";
+
 const Hero = (props) => {
   return (
     <section class="container hero">
@@ -11,7 +13,7 @@ const Hero = (props) => {
           calibrate in seconds, and start playing together with the phones you already have.
         </p> */}
         <div class="hero-cta">
-          <a class="btn primary" href={props.purchaseHref}>Purchase</a>
+          <PurchaseBtn />
           <a
             class="btn ghost"
             href={props.demoHref}
