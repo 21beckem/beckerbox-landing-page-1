@@ -1,15 +1,12 @@
 const PurchaseBtn = (props) => {
-    const handleClick = () => {
+    const handleClick = (event) => {
         if (!props.product) return;
-        Payhip.Checkout.open({
-            icon: 'https://raw.githubusercontent.com/21beckem/becker-suite-public-assets/refs/heads/main/logo.png',
-            title: 'Becker Box - Full Version',
-            product: props.product,
-            message: 'A custom message to add to the checkout',
-            successCallback: function() {
-                console.log('Purchase successful!');
-            }
-        });
+        if (props.onClick) props.onClick(event);
+        window.dispatchEvent(
+            new CustomEvent('checkout:open', {
+                detail: { product: props.product }
+            })
+        );
     };
     return (
         <a class="btn primary" onClick={handleClick} {...props}>

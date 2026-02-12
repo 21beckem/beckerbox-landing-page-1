@@ -291,6 +291,85 @@ button {
   background: white;
 }
 
+.checkout-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 28, 22, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 20;
+  animation: demoFadeIn 0.2s ease;
+}
+
+.checkout-panel {
+  width: min(900px, 100%);
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid rgba(15, 28, 22, 0.08);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  animation: demoPopIn 0.25s ease;
+}
+
+.checkout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(25, 194, 101, 0.16), rgba(66, 150, 255, 0.16));
+  border-bottom: 1px solid rgba(15, 28, 22, 0.08);
+}
+
+.checkout-title h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.checkout-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.checkout-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(15, 28, 22, 0.08);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkout-close:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(15, 28, 22, 0.12);
+}
+
+.checkout-body {
+  padding: 24px;
+  background: #f4f7f6;
+}
+
+.checkout-overlay-placeholder {
+  min-height: min(65vh, 540px);
+  border-radius: calc(var(--radius) - 6px);
+  background: linear-gradient(135deg, rgba(15, 28, 22, 0.05), rgba(25, 194, 101, 0.08));
+  border: 1px dashed rgba(15, 28, 22, 0.12);
+}
+
 @keyframes demoFadeIn {
   from {
     opacity: 0;
