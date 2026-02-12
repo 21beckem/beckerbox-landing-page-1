@@ -45,9 +45,12 @@ const CheckoutOverlay = (props) => {
             </button>
           </div>
           <div class="checkout-body">
-            <div
-              class="checkout-overlay-placeholder"
-            ></div>
+            <div class="checkout-overlay-placeholder">
+              <div class="checkout-loader">
+                <div class="loader-spinner"></div>
+                <p>Loading checkout...</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
