@@ -20,10 +20,11 @@ const Navbar = () => {
             BeckerBox
           </a>
           <nav class="nav-links">
-            <a href="#how">How It Works</a>
-            <a href="#features">Features</a>
-            <a href="#faq">FAQ</a>
-            <a href="#pricing">Purchase</a>
+            <a href="/#how">How It Works</a>
+            <a href="/#features">Features</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/#pricing">Purchase</a>
           </nav>
           <button
             class="nav-menu-btn"
