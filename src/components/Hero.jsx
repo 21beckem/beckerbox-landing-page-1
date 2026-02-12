@@ -27,9 +27,12 @@ const Hero = (props) => {
         </p> */}
         <div class="hero-cta">
           <PurchaseBtn product="ilf1s" />
-          <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
+          {/* <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
             Launch Demo
-          </button>
+          </button> */}
+          <a class="btn ghost demo-btn" type="button" href="#how">
+            Learn More
+          </a>
         </div>
         {/* <p class="hero-note">
           Works with iOS and Android. No bundled games or firmware — you use the titles you own.

@@ -727,6 +727,86 @@ button {
   color: var(--muted);
 }
 
+/* Features Section - Horizontal List Layout */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(25, 194, 101, 0.04), rgba(66, 150, 255, 0.04));
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(25, 194, 101, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--green), #5be28d);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-item:hover {
+  background: linear-gradient(135deg, rgba(25, 194, 101, 0.1), rgba(66, 150, 255, 0.08));
+  border-color: rgba(25, 194, 101, 0.2);
+  box-shadow: 0 8px 24px rgba(25, 194, 101, 0.1);
+  transform: translateX(4px);
+}
+
+.feature-item:hover::before {
+  opacity: 1;
+}
+
+.feature-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: linear-gradient(135deg, var(--green), #5be28d);
+  border-radius: 16px;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 8px 20px rgba(25, 194, 101, 0.25);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-item-icon {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 12px 28px rgba(25, 194, 101, 0.35);
+}
+
+.feature-item-content h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.feature-item-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .how-step {
   display: grid;
   gap: 16px;
@@ -1117,5 +1197,26 @@ button {
 
   .checkout-overlay-placeholder {
     min-height: calc(100dvh - 129px);
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-item {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .feature-item-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 20px;
+  }
+
+  .feature-item-content h3 {
+    font-size: 1rem;
   }
 }

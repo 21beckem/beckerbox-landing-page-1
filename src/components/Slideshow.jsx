@@ -7,7 +7,7 @@ const Slideshow = () => {
       title: 'Play Together',
       description: 'Turn any room into a motion-powered game night with friends.',
       ctaLabel: 'How it works',
-      ctaHref: '#how-it-works',
+      ctaHref: '#how',
     },
     {
       image: '/images/remote-steering.png',
