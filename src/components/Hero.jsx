@@ -27,7 +27,7 @@ const Hero = (props) => {
         </p> */}
         <div class="hero-cta">
           <PurchaseBtn product="ilf1s" />
-          <button class="btn ghost" type="button" onClick={handleOpenDemo}>
+          <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
             Launch Demo
           </button>
         </div>
