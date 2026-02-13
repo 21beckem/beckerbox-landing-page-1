@@ -68,7 +68,10 @@ const Download = (props) => {
           throw new Error(`GitHub releases request failed: ${response.status}`);
         }
         const data = await response.json();
-        setReleases(Array.isArray(data) ? data : []);
+        if (!Array.isArray(data))
+            setReleases([]);
+        else
+            setReleases(data.sort((a, b) => new Date(b.published_at) - new Date(a.published_at)));
       } catch (error) {
         setLoadError('Unable to load downloads right now. Please check back soon.');
         setReleases([]);
