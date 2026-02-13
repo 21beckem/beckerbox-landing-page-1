@@ -35,7 +35,7 @@ const Faq = (props) => {
     }, 500);
   });
   return (
-    <section class="section" id="faq">
+    <section class={`section ${props.slim ? 'slim' : ''} ${props.slimTTop ? 'slim-top' : ''} ${props.slimBottom ? 'slim-bottom' : ''}`} id="faq">
       <div class="container">
         <SectionHeader
           title="Frequently asked questions"

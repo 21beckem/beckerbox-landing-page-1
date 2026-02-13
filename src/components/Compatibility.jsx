@@ -1,8 +1,8 @@
 import SectionHeader from './SectionHeader';
 
-const Compatibility = () => {
+const Compatibility = (props) => {
   return (
-    <section class="section" id="compatibility">
+    <section class={`section ${props.slim ? 'slim' : ''} ${props.slimTTop ? 'slim-top' : ''} ${props.slimBottom ? 'slim-bottom' : ''}`} id="compatibility">
       <div class="container">
         <SectionHeader
           title="Compatible right away"

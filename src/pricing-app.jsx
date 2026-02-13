@@ -1,6 +1,7 @@
 import { createSignal, onCleanup, onMount } from 'solid-js';
 import Navbar from './components/Navbar';
 import Pricing from './components/Pricing';
+import Download from './components/Download';
 import Footer from './components/Footer';
 import CheckoutOverlay from './components/CheckoutOverlay';
 
@@ -47,7 +48,8 @@ const App = () => {
     <div class="page">
       <Navbar />
       <main>
-        <Pricing />
+        <Pricing slim={true} />
+        <Download slim={true} />
       </main>
       <Footer />
       <CheckoutOverlay

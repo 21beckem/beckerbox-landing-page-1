@@ -35,7 +35,7 @@ const Features = (props) => {
     },
   ];
   return (
-    <section class="section" id="features">
+    <section class={`section ${props.slim ? 'slim' : ''} ${props.slimTTop ? 'slim-top' : ''} ${props.slimBottom ? 'slim-bottom' : ''}`} id="features">
       <div class="container">
         <SectionHeader
           title="Built for fast, family-friendly play"

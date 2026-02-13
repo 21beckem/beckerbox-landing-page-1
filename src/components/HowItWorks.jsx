@@ -17,7 +17,7 @@ const HowItWorks = (props) => {
     },
   ];
   return (
-    <section class="section" id="how">
+    <section class={`section ${props.slim ? 'slim' : ''} ${props.slimTTop ? 'slim-top' : ''} ${props.slimBottom ? 'slim-bottom' : ''}`} id="how">
       <div class="container">
         <SectionHeader
           title="How it works"

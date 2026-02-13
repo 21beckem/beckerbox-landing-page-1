@@ -21,7 +21,7 @@ const Testimonials = (props) => {
     }
   ];
   return (
-    <section class="section" id="testimonials">
+    <section class={`section ${props.slim ? 'slim' : ''} ${props.slimTTop ? 'slim-top' : ''} ${props.slimBottom ? 'slim-bottom' : ''}`} id="testimonials">
       <div class="container">
         <SectionHeader
           title="Families are already playing"
