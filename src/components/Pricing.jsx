@@ -20,7 +20,7 @@ const Pricing = (props) => {
     {
       title: 'Free With Ads',
       price: '$0',
-      period: 'desktop',
+      period: 'never',
       description: 'If you cannot support me financially, that\'s okay! You can use BeckerBox for free with ads.',
       bullets: ['Full access to all features', 'Ad-supported sessions'],
       cta: 'Coming Soon',
@@ -35,7 +35,8 @@ const Pricing = (props) => {
       description: 'If you can\'t afford the Standard price, this is a lower-cost way to support me.',
       bullets: ['Full access to all features', 'No ads'],
       cta: 'Purchase',
-      product: 'CODE',
+      product: 'ilf1s',
+      variant: '1771009262029',
       highlight: false,
       comingSoon: false,
       tag: 'Low Cost',
@@ -47,19 +48,21 @@ const Pricing = (props) => {
       description: 'Support me and the project.',
       bullets: ['Full access to all features', 'No ads'],
       cta: 'Purchase',
-      product: 'CODE',
+      product: 'ilf1s',
+      variant: '1771009293244',
       highlight: true,
       comingSoon: false,
       tag: 'Recommended',
     },
     {
       title: 'Supporter',
-      price: '$45+',
-      period: 'supporter',
+      price: '$45',
+      period: 'one-time',
       description: 'If you want to give extra support, this is it.',
       bullets: ['Full access to all features', 'No ads', 'Personal thank-you'],
-      cta: 'Support',
-      product: 'CODE',
+      cta: 'Purchase',
+      product: 'ilf1s',
+      variant: '1771009313859',
       highlight: false,
       comingSoon: false,
       tag: 'Supporter',
@@ -83,6 +86,7 @@ const Pricing = (props) => {
                 bullets={tier.bullets}
                 cta={tier.cta}
                 product={tier.product}
+                variant={tier.variant}
                 external={tier.external}
                 highlight={tier.highlight}
                 comingSoon={tier.comingSoon}

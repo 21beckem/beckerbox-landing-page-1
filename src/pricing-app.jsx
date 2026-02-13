@@ -8,29 +8,13 @@ import CheckoutOverlay from './components/CheckoutOverlay';
 const App = () => {
   const [isCheckoutOpen, setIsCheckoutOpen] = createSignal(false);
   const [checkoutProduct, setCheckoutProduct] = createSignal(null);
-
-  const openPayhipCheckout = (product) => {
-    if (!product || !window.Payhip?.Checkout?.open) return;
-    setTimeout(() => {
-      window.Payhip.Checkout.open({
-        method: 'inline',
-        iframeTarget: 'checkout-overlay-placeholder',
-        icon: 'https://raw.githubusercontent.com/21beckem/becker-suite-public-assets/refs/heads/main/logo.png',
-        title: 'Becker Box - Full Version',
-        product,
-        message: 'A custom message to add to the checkout',
-        successCallback: function() {
-          console.log('Purchase successful!');
-        }
-      });
-    }, 300);
-  };
+  const [checkoutVariant, setCheckoutVariant] = createSignal(null);
 
   const handleCheckoutOpen = (event) => {
     const product = event.detail?.product ?? null;
     setCheckoutProduct(product);
+    setCheckoutVariant(event.detail?.variant ?? null);
     setIsCheckoutOpen(true);
-    requestAnimationFrame(() => openPayhipCheckout(product));
   };
 
   const handleCheckoutClose = () => {
@@ -56,6 +40,7 @@ const App = () => {
         isOpen={isCheckoutOpen()}
         onClose={handleCheckoutClose}
         product={checkoutProduct()}
+        variant={checkoutVariant()}
       />
     </div>
   );

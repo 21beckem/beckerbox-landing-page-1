@@ -20,6 +20,17 @@ const CheckoutOverlay = (props) => {
     });
   });
 
+  const makeIframeSrc = () => {
+    if (!props.product) return '';
+    const baseUrl = 'https://payhip.com/buy';
+    const params = new URLSearchParams({
+      variant_id: props.variant ?? '',
+      link: props.product,
+      [`variant_combination[${props.product}]`]: props.variant ?? ''
+    });
+    return `${baseUrl}?${params.toString()}`;
+  }
+
   return (
     <Show when={props.isOpen}>
       <div
@@ -50,6 +61,7 @@ const CheckoutOverlay = (props) => {
                 <div class="loader-spinner"></div>
                 <p>Loading checkout...</p>
               </div>
+              <iframe src={makeIframeSrc()} frameborder="0"></iframe>
             </div>
           </div>
         </div>

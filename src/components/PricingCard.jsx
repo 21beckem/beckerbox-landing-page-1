@@ -28,6 +28,7 @@ const PricingCard = (props) => {
           rel={props.external ? 'noreferrer' : undefined}
           aria-disabled={props.comingSoon ? 'true' : 'false'}
           product={props.product}
+          variant={props.variant}
           text={props.cta}
         />
       </div>

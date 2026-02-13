@@ -4,7 +4,10 @@ const PurchaseBtn = (props) => {
         if (props.onClick) props.onClick(event);
         window.dispatchEvent(
             new CustomEvent('checkout:open', {
-                detail: { product: props.product }
+                detail: {
+                    product: props.product,
+                    variant: props.variant
+                }
             })
         );
     };

@@ -439,6 +439,7 @@ button {
 
 .checkout-overlay-placeholder > iframe {
   flex: 1;
+  border: 0;
   position: relative;
   z-index: 2;
   border-radius: calc(var(--radius) - 6px);
