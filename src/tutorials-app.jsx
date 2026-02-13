@@ -11,8 +11,7 @@ const App = () => {
       description: 'Learn how to install BeckerBox after purchasing.',
       icon: 'fa-box-open',
       tag: 'Setup',
-      time: '5 min',
-      link: '/tutorials/installation',
+      time: '5 min'
     },
     {
       id: 'import-games',
@@ -20,8 +19,7 @@ const App = () => {
       description: 'Bring your game files into BeckerBox so you can play them.',
       icon: 'fa-folder-open',
       tag: 'Library',
-      time: '6 min',
-      link: '/tutorials/import-games',
+      time: '6 min'
     },
     {
       id: 'connect-controller',
@@ -29,8 +27,7 @@ const App = () => {
       description: 'Connect your phone as a controller in under a minute.',
       icon: 'fa-mobile-screen-button',
       tag: 'Controllers',
-      time: '4 min',
-      link: '/tutorials/connect-controller',
+      time: '4 min'
     },
     {
       id: 'change-disc',
@@ -38,8 +35,7 @@ const App = () => {
       description: 'Swap game discs or change games without losing progress.',
       icon: 'fa-compact-disc',
       tag: 'Library',
-      time: '3 min',
-      link: '/tutorials/change-disc',
+      time: '3 min'
     },
     {
       id: 'remote-layout',
@@ -47,15 +43,15 @@ const App = () => {
       description: 'Customize your remote layout for each game or player.',
       icon: 'fa-sliders',
       tag: 'Controls',
-      time: '5 min',
-      link: '/tutorials/remote-layout',
+      time: '5 min'
     },
   ];
 
   let deck;
-  window.mountDeck = async (name) => {
+  const mountDeck = async (name) => {
     // destroy old deck
     deck?.destroy();
+    deck = null;
 
     // create new deck
     let deckEl = document.createElement('div');
@@ -63,7 +59,15 @@ const App = () => {
 
     // fetch deck html
     let response = await fetch(`/tutorials/${name}.html`);
+    if (!response.ok) {
+      console.error('Failed to load tutorial:', response.statusText);
+      return;
+    }
     deckEl.innerHTML = await response.text();
+    if (!deckEl.querySelector('.slides')) {
+      console.error('Invalid tutorial format: missing .slides container');
+      return;
+    }
 
     // mount deck
     document.getElementById('tutorials-hero-panel').innerHTML = '';
@@ -76,6 +80,9 @@ const App = () => {
       height: '100%'
     });
     deck.initialize();
+
+    // scroll to deck
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   onMount(async () => {
@@ -121,7 +128,7 @@ const App = () => {
                     <h3>{tutorial.title}</h3>
                     <p>{tutorial.description}</p>
                     <div class="tutorial-card-actions">
-                      <a class="btn light" href={tutorial.link}>Launch <i class="fa-solid fa-arrow-right"></i></a>
+                      <button class="btn light" onclick={() => mountDeck(tutorial.id)}>Launch <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                   </article>
                 )}

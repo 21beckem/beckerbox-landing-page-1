@@ -1504,6 +1504,8 @@ button {
 .tutorials-hero-panel .reveal {
   width: 100%;
   height: 100%;
+  border-radius: 15px;
+  box-shadow: inset 0 0 13px -5px var(--green-dark);
 }
 .reveal .controls {
   color: var(--green-dark);
