@@ -24,7 +24,7 @@ const Navbar = () => {
             <a href="/#faq">FAQ</a>
             <a href="/tutorials.html">Tutorials</a>
             <a href="/contact.html">Contact</a>
-            <a href="/#pricing">Purchase</a>
+            <a href="/pricing.html">Download</a>
           </nav>
           <button
             class="nav-menu-btn"
@@ -41,10 +41,12 @@ const Navbar = () => {
       </header>
       <div class={`nav-mobile-menu ${isMenuOpen() ? 'open' : ''}`}>
         <nav class="nav-mobile-links">
-          <a href="#how" onClick={closeMenu}>How It Works</a>
-          <a href="#features" onClick={closeMenu}>Features</a>
-          <a href="#faq" onClick={closeMenu}>FAQ</a>
-          <a href="#pricing" onClick={closeMenu}>Purchase</a>
+          <a href="/#how" onClick={closeMenu}>How It Works</a>
+          <a href="/#features" onClick={closeMenu}>Features</a>
+          <a href="/#faq" onClick={closeMenu}>FAQ</a>
+          <a href="/tutorials.html" onClick={closeMenu}>Tutorials</a>
+          <a href="/contact.html" onClick={closeMenu}>Contact</a>
+          <a href="/pricing.html" onClick={closeMenu}>Purchase</a>
         </nav>
       </div>
       <div class="nav-spacer"></div>

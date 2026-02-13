@@ -1,12 +1,6 @@
 import { createSignal, onCleanup, onMount } from 'solid-js';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Slideshow from './components/Slideshow';
-import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
-import Compatibility from './components/Compatibility';
-import Testimonials from './components/Testimonials';
-import Faq from './components/Faq';
+import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import CheckoutOverlay from './components/CheckoutOverlay';
 
@@ -52,17 +46,9 @@ const App = () => {
   return (
     <div class="page">
       <Navbar />
-      <Hero
-        purchaseHref="#pricing"
-        demoHref="https://r.box.beckersuite.com/v2/host/"
-        imageSrc="/images/beckerbox-hero.png"
-      />
-      <Slideshow />
-      <HowItWorks />
-      <Features />
-      <Compatibility />
-      <Testimonials />
-      <Faq />
+      <main>
+        <Pricing />
+      </main>
       <Footer />
       <CheckoutOverlay
         isOpen={isCheckoutOpen()}

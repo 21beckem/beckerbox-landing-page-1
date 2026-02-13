@@ -26,7 +26,7 @@ const Hero = (props) => {
           calibrate in seconds, and start playing together with the phones you already have.
         </p> */}
         <div class="hero-cta">
-          <PurchaseBtn product="ilf1s" />
+          <a class="btn primary" href="/pricing.html">Download</a>
           {/* <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
             Launch Demo
           </button> */}
