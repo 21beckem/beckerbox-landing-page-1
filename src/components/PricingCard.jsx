@@ -11,12 +11,13 @@ const PricingCard = (props) => {
         'is-soon': props.comingSoon,
       }}
     >
-      {props.tag && <div class="pricing-tag">{props.tag}</div>}
+      {/* {props.tag && <div class="pricing-tag">{props.tag}</div>} */}
       <h3>{props.title}</h3>
       <p class="price">
         {props.price} <span>/{props.period}</span>
       </p>
       <p>{props.description}</p>
+      <div style="min-height: 1rem; flex: 1;"></div>
       <ul class="list">
         <For each={props.bullets}>{(item) => <li>{item}</li>}</For>
       </ul>

@@ -24,7 +24,7 @@ const Navbar = () => {
             <a href="/#faq">FAQ</a>
             <a href="/tutorials.html">Tutorials</a>
             <a href="/contact.html">Contact</a>
-            <a href="/pricing.html">Download</a>
+            <a href="/pricing.html" class="btn primary">Download</a>
           </nav>
           <button
             class="nav-menu-btn"

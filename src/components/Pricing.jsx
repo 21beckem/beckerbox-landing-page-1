@@ -1,8 +1,11 @@
-import { For } from 'solid-js';
+import { For, Show, createMemo, createSignal, onMount } from 'solid-js';
 import SectionHeader from './SectionHeader';
 import PricingCard from './PricingCard';
 
 const Pricing = (props) => {
+  const [releases, setReleases] = createSignal([]);
+  const [isLoading, setIsLoading] = createSignal(true);
+  const [loadError, setLoadError] = createSignal('');
   const tiers = [
     // {
     //   title: 'Demo Mode',
@@ -21,32 +24,129 @@ const Pricing = (props) => {
       title: 'Free With Ads',
       price: '$0',
       period: 'desktop',
-      description: 'Unlock the full desktop hub with short ads between sessions.',
-      bullets: ['Up to 2 remotes', 'Ad-supported sessions', 'Cloud pairing profiles'],
+      description: 'If you cannot support me financially, that\'s okay! You can use BeckerBox for free with ads.',
+      bullets: ['Full access to all features', 'Ad-supported sessions'],
       cta: 'Coming Soon',
       highlight: false,
       comingSoon: true,
       tag: 'Coming Soon',
     },
     {
-      title: 'Full',
-      price: '$45',
+      title: 'Budget',
+      price: '$20',
       period: 'one-time',
-      description: 'The premium experience for families and couch co-op nights.',
-      bullets: ['Up to 4 remotes', 'No ads', 'Priority setup support'],
+      description: 'If you can\'t afford the Standard price, this is a lower-cost way to support me.',
+      bullets: ['Full access to all features', 'No ads'],
       cta: 'Purchase',
-      product: 'ilf1s',
+      product: 'CODE',
+      highlight: false,
+      comingSoon: false,
+      tag: 'Low Cost',
+    },
+    {
+      title: 'Standard',
+      price: '$35',
+      period: 'one-time',
+      description: 'Support me and the project.',
+      bullets: ['Full access to all features', 'No ads'],
+      cta: 'Purchase',
+      product: 'CODE',
       highlight: true,
       comingSoon: false,
-      tag: 'Best Value',
+      tag: 'Recommended',
+    },
+    {
+      title: 'Supporter',
+      price: '$45+',
+      period: 'supporter',
+      description: 'If you want to give extra support, this is it.',
+      bullets: ['Full access to all features', 'No ads', 'Personal thank-you'],
+      cta: 'Support',
+      product: 'CODE',
+      highlight: false,
+      comingSoon: false,
+      tag: 'Supporter',
     },
   ];
+  const formatDate = (value) => {
+    if (!value) return 'Unknown';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return 'Unknown';
+    return date.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  };
+
+  const getReleaseSummary = (release) => {
+    const summary = release?.body?.split('\n')?.find((line) => line.trim().length > 0);
+    return summary ?? 'Release notes available on GitHub.';
+  };
+
+  const findAsset = (release, token) => {
+    const matcher = new RegExp(`-${token}\\.[a-z0-9]+$`, 'i');
+    return release?.assets?.find((asset) => matcher.test(asset?.name ?? '')) ?? null;
+  };
+
+  const normalizeRelease = (release) => {
+    const windowsAsset = findAsset(release, 'win');
+    const macAsset = findAsset(release, 'mac');
+    return {
+      id: release?.id ?? release?.tag_name ?? release?.name,
+      name: release?.name || release?.tag_name || 'Release',
+      tag: release?.tag_name || release?.name || 'Release',
+      notes: getReleaseSummary(release),
+      publishedAt: release?.published_at,
+      windows: windowsAsset
+        ? {
+            name: windowsAsset.name,
+            url: windowsAsset.browser_download_url,
+            size: windowsAsset.size,
+          }
+        : null,
+      mac: macAsset
+        ? {
+            name: macAsset.name,
+            url: macAsset.browser_download_url,
+            size: macAsset.size,
+          }
+        : null,
+    };
+  };
+
+  const normalizedReleases = createMemo(() => releases().map(normalizeRelease));
+  const latestRelease = createMemo(() => normalizedReleases()[0] ?? null);
+  const archiveReleases = createMemo(() => [...normalizedReleases()]);
+
+  onMount(() => {
+    const fetchReleases = async () => {
+      try {
+        setIsLoading(true);
+        setLoadError('');
+        const response = await fetch(
+          'https://api.github.com/repos/21beckem/beckerbox-public/releases',
+        );
+        if (!response.ok) {
+          throw new Error(`GitHub releases request failed: ${response.status}`);
+        }
+        const data = await response.json();
+        setReleases(Array.isArray(data) ? data : []);
+      } catch (error) {
+        setLoadError('Unable to load downloads right now. Please check back soon.');
+        setReleases([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchReleases();
+  });
   return (
-    <section class="section" id="pricing">
+    <section class="section">
       <div class="container">
         <SectionHeader
           title="Choose your setup"
-          lead="Start free, upgrade when you are ready, and keep the experience tailored to your crew."
         />
         <div class="pricing-grid">
           <For each={tiers}>
@@ -66,6 +166,142 @@ const Pricing = (props) => {
               />
             )}
           </For>
+        </div>
+        <div class="pricing-download">
+          <div class="download-card">
+            <div class="download-copy">
+              <p class="download-kicker">Download</p>
+              <h3>Get the latest BeckerBox</h3>
+              <p>
+                Builds are pulled from GitHub releases. I ship Windows first, and Mac OS
+                shows up here as soon as it is ready.
+              </p>
+              <div class="download-actions">
+                <Show
+                  when={!isLoading() && latestRelease()?.windows}
+                  fallback={<span class="download-soon">Windows build coming soon</span>}
+                >
+                  <a
+                    class="btn primary"
+                    href={latestRelease().windows.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Download for Windows
+                  </a>
+                </Show>
+                <Show
+                  when={!isLoading() && latestRelease()?.mac}
+                  fallback={<span class="download-soon">Mac OS coming soon</span>}
+                >
+                  <a
+                    class="btn light"
+                    href={latestRelease().mac.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Download for Mac
+                  </a>
+                </Show>
+              </div>
+              <Show when={loadError()}>
+                <p class="download-error">{loadError()}</p>
+              </Show>
+            </div>
+            <div class="download-meta">
+              <div>
+                <span class="download-label">Latest version</span>
+                <strong>{latestRelease()?.tag ?? (isLoading() ? 'Loading...' : 'Unavailable')}</strong>
+              </div>
+              <div>
+                <span class="download-label">Published</span>
+                <strong>
+                  {latestRelease()
+                    ? formatDate(latestRelease().publishedAt)
+                    : isLoading()
+                    ? 'Loading...'
+                    : 'Unknown'}
+                </strong>
+              </div>
+            </div>
+          </div>
+          <details class="download-archive">
+            <summary>All versions and release notes</summary>
+            <div class="download-table-wrap">
+              <table class="download-table">
+                <thead>
+                  <tr>
+                    <th>Version</th>
+                    <th>Platform</th>
+                    <th>Notes</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <Show
+                    when={!isLoading()}
+                    fallback={
+                      <tr>
+                        <td colSpan="4">Loading releases...</td>
+                      </tr>
+                    }
+                  >
+                    <Show
+                      when={archiveReleases().length > 0}
+                      fallback={
+                        <tr>
+                          <td colSpan="4">No older releases available yet.</td>
+                        </tr>
+                      }
+                    >
+                      <For each={archiveReleases()}>
+                        {(release) => (
+                          <tr>
+                            <td>{release.tag}</td>
+                            <td>
+                              {release.windows && release.mac
+                                ? 'Windows, Mac'
+                                : release.windows
+                                ? 'Windows'
+                                : release.mac
+                                ? 'Mac'
+                                : 'Unavailable'}
+                            </td>
+                            <td>{release.notes}</td>
+                            <td>
+                              <div class="download-link-group">
+                                {release.windows && (
+                                  <a
+                                    class="btn light download-link"
+                                    href={release.windows.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    Windows
+                                  </a>
+                                )}
+                                {release.mac && (
+                                  <a
+                                    class="btn light download-link"
+                                    href={release.mac.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    Mac
+                                  </a>
+                                )}
+                                {!release.windows && !release.mac && <span>Unavailable</span>}
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+                      </For>
+                    </Show>
+                  </Show>
+                </tbody>
+              </table>
+            </div>
+          </details>
         </div>
       </div>
     </section>
