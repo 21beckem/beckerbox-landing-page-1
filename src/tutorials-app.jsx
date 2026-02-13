@@ -1,4 +1,4 @@
-import { For } from 'solid-js';
+import { For, onMount } from 'solid-js';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SectionHeader from './components/SectionHeader';
@@ -52,6 +52,36 @@ const App = () => {
     },
   ];
 
+  let deck;
+  window.mountDeck = async (name) => {
+    // destroy old deck
+    deck?.destroy();
+
+    // create new deck
+    let deckEl = document.createElement('div');
+    deckEl.classList.add('reveal');
+
+    // fetch deck html
+    let response = await fetch(`/tutorials/${name}.html`);
+    deckEl.innerHTML = await response.text();
+
+    // mount deck
+    document.getElementById('tutorials-hero-panel').innerHTML = '';
+    document.getElementById('tutorials-hero-panel').appendChild(deckEl);
+
+    // initialize deck
+    deck = new Reveal(deckEl, {
+      embedded: true,
+      width: '100%',
+      height: '100%'
+    });
+    deck.initialize();
+  };
+
+  onMount(async () => {
+    mountDeck('installation');
+  });
+
   return (
     <div class="page">
       <Navbar />
@@ -60,38 +90,15 @@ const App = () => {
           <div class="container tutorials-hero-inner">
             <div class="tutorials-hero-copy">
               <p class="tutorials-kicker">Tutorials</p>
-              <h1>Set up BeckerBox in minutes.</h1>
+              <h1>Get started in minutes.</h1>
               <p>
-                Follow clear, step-by-step guides for installing BeckerBox, importing
-                games, and customizing controllers for everyone in the room.
+                Follow clear, step-by-step guides to learn everything you need to know about BeckerBox
               </p>
               <div class="tutorials-hero-actions">
-                <a class="btn primary" href="#tutorials">Browse tutorials</a>
                 <a class="btn ghost" href="/contact.html">Need help?</a>
               </div>
             </div>
-            <div class="tutorials-hero-panel">
-              <div class="tutorials-hero-card">
-                <div class="tutorials-hero-icon">
-                  <i class="fa-solid fa-circle-play"></i>
-                </div>
-                <div class="tutorials-hero-card-body">
-                  <p class="tutorials-hero-label">Start here</p>
-                  <h3>Installation + first pairing</h3>
-                  <p>Get BeckerBox installed and connect your first phone.</p>
-                  <a class="btn light" href="/tutorials/installation">Open guide</a>
-                </div>
-              </div>
-              <div class="tutorials-hero-stats">
-                <div>
-                  <span>5</span>
-                  <p>Guides ready</p>
-                </div>
-                <div>
-                  <span>15</span>
-                  <p>Minutes total</p>
-                </div>
-              </div>
+            <div id="tutorials-hero-panel" class="tutorials-hero-panel">
             </div>
           </div>
         </section>
@@ -110,22 +117,11 @@ const App = () => {
                       <div class="tutorial-card-icon">
                         <i class={`fa-solid ${tutorial.icon}`}></i>
                       </div>
-                      <span class="tutorial-tag">{tutorial.tag}</span>
                     </div>
                     <h3>{tutorial.title}</h3>
                     <p>{tutorial.description}</p>
-                    <div class="tutorial-card-meta">
-                      <span>
-                        <i class="fa-regular fa-clock"></i>
-                        {tutorial.time}
-                      </span>
-                      <span>
-                        <i class="fa-solid fa-list-check"></i>
-                        Step-by-step
-                      </span>
-                    </div>
                     <div class="tutorial-card-actions">
-                      <a class="btn light" href={tutorial.link}>View tutorial</a>
+                      <a class="btn light" href={tutorial.link}>Launch <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                   </article>
                 )}

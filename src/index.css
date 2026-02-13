@@ -1404,7 +1404,7 @@ button {
 
 .tutorials-hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
   gap: 36px;
   align-items: center;
   background: rgba(255, 255, 255, 0.78);
@@ -1495,38 +1495,18 @@ button {
   margin-bottom: 12px;
 }
 
-.tutorials-hero-label {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.7rem;
+.tutorials-hero-panel {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 10 / 7;
+}
+.tutorials-hero-panel .reveal {
+  width: 100%;
+  height: 100%;
+}
+.reveal .controls {
   color: var(--green-dark);
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.tutorials-hero-stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.tutorials-hero-stats div {
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: var(--radius-sm);
-  padding: 16px 18px;
-  border: 1px solid rgba(15, 28, 22, 0.08);
-}
-
-.tutorials-hero-stats span {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.tutorials-hero-stats p {
-  color: var(--muted);
-  margin-top: 4px;
-  font-size: 0.95rem;
 }
 
 .tutorials-section {
