@@ -48,7 +48,7 @@ const App = () => {
   ];
 
   let deck;
-  const mountDeck = async (name) => {
+  window.mountDeck = async (name) => {
     // destroy old deck
     deck?.destroy();
     deck = null;
@@ -76,6 +76,7 @@ const App = () => {
     // initialize deck
     deck = new Reveal(deckEl, {
       embedded: true,
+      slideNumber: 'c/t',
       width: '100%',
       height: '100%'
     });

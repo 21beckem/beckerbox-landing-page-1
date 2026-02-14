@@ -1506,6 +1506,19 @@ button {
   height: 100%;
   border-radius: 15px;
   box-shadow: inset 0 0 13px -5px var(--green-dark);
+
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+  }
+  .slide-number {
+    top: 15px;
+    left: 15px;
+    bottom: unset !important;
+    right: unset !important;
+    background-color: transparent !important;
+    color: var(--green-dark) !important;
+    font-size: 1.5rem !important;
+  }
 }
 .reveal .controls {
   color: var(--green-dark);
