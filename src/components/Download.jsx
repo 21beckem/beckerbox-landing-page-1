@@ -51,6 +51,11 @@ const Download = (props) => {
         : null,
     };
   };
+  const openDownloadLink = (el) => {
+    const url = el.currentTarget.getAttribute('href');
+    document.getElementById('download-warning').scrollIntoView({ behavior: 'smooth' });
+    window.open(url, 'window', 'noopener,noreferrer');
+  };
 
   const normalizedReleases = createMemo(() => releases().map(normalizeRelease));
   const latestRelease = createMemo(() => normalizedReleases()[0] ?? null);
@@ -80,6 +85,7 @@ const Download = (props) => {
       }
     };
 
+
     fetchReleases();
   });
 
@@ -100,27 +106,31 @@ const Download = (props) => {
                   when={!isLoading() && latestRelease()?.windows}
                   fallback={<span class="download-soon">Windows coming soon</span>}
                 >
-                  <a
+                  <button
+                    type="button"
                     class="btn primary"
                     href={latestRelease().windows.url}
+                    onClick={openDownloadLink}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <i class="fa-brands fa-windows" style="font-size: 1.5rem;"></i> Download for Windows
-                  </a>
+                  </button>
                 </Show>
                 <Show
                   when={!isLoading() && latestRelease()?.mac}
                   fallback={<span class="download-soon">Mac OS coming soon</span>}
                 >
-                  <a
+                  <button
+                    type="button"
                     class="btn light"
                     href={latestRelease().mac.url}
+                    onClick={openDownloadLink}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <i class="fa-brands fa-apple" style="font-size: 1.5rem;"></i> Download for Mac
-                  </a>
+                  </button>
                 </Show>
               </div>
               <Show when={loadError()}>
@@ -145,7 +155,7 @@ const Download = (props) => {
             </div>
           </div>
 
-          <div class="card download-warning" style="
+          <div class="card download-warning" id="download-warning" style="
             margin-top: 2rem;
             background-color: #fff3e0;
             border-color: #ffcc80;
