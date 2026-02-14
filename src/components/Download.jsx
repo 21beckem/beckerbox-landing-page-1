@@ -144,6 +144,25 @@ const Download = (props) => {
               </div>
             </div>
           </div>
+
+          <div class="card download-warning" style="
+            margin-top: 2rem;
+            background-color: #fff3e0;
+            border-color: #ffcc80;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transform: translateY(-1rem);
+          ">
+            <i class="fa-solid fa-triangle-exclamation" style="font-size: 1.5rem; margin-right: 0.5rem; color: #ff9800;"></i>
+            <div>
+              <h3>Your computer will probably say that BeckerBox is not recognized or is unsafe.</h3>
+              <p>Unfortunately, I cannot fix this warning without paying hundreds of dollars a year to get BeckerBox recognized as "safe". BeckerBox is 100% coded by me. It is safe.</p>
+              <p>With your supporting purchases, BeckerBox can be registered as "safe" for future customers.</p>
+              <p>If you have questions or concerns, please contact me <a style="text-decoration: underline;" href="/contact.html">here</a></p>
+            </div>
+          </div>
+
           <details class="download-archive">
             <summary>All versions and release notes</summary>
             <div class="download-table-wrap">

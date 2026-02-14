@@ -1519,6 +1519,9 @@ button {
     color: var(--green-dark) !important;
     font-size: 1.5rem !important;
   }
+  .btn {
+    margin-top: 2rem;
+  }
 }
 .reveal .controls {
   color: var(--green-dark);
