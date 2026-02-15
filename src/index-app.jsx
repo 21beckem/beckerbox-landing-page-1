@@ -19,11 +19,11 @@ const App = () => {
         imageSrc="/images/beckerbox-hero.png"
       />
       <Slideshow />
+      <Faq slim={true} />
       <HowItWorks />
       <Features />
       <Compatibility />
       <Testimonials />
-      <Faq />
       <Footer />
     </div>
   );

@@ -17,7 +17,11 @@ const Hero = (props) => {
     <>
       <section class="container hero">
       <div class="hero-copy">
-        <h1>Turn every phone into a motion controller.</h1>
+        <h3 style="
+          width: 100%;
+          max-width: 600px;
+          opacity: 0.9;
+        ">Bring back the motion-controlled living-room games many families grew up with — now powered by your PC and controlled by smartphones.</h3>
         {/* <p>
           Bring back the motion-controlled living-room games many families grew up with — now powered by your PC and controlled by smartphones.
         </p>

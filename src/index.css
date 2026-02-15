@@ -526,7 +526,7 @@ button {
 }
 
 .slideshow {
-  padding: 18px 0 96px;
+  padding: 18px 0 60px;
 }
 
 .slideshow-shell {
@@ -689,7 +689,7 @@ button {
 
 .section {
   --slim: 40px;
-  padding: 84px 0;
+  padding: 64px 0;
   scroll-margin-top: 110px;
 }
 .section.slim {
