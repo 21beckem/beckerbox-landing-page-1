@@ -2,6 +2,7 @@ import { For, onMount } from 'solid-js';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SectionHeader from './components/SectionHeader';
+import './components/Tutorials.css';
 
 const App = () => {
   const tutorials = [

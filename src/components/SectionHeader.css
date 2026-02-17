@@ -1,0 +1,14 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 38px;
+}
+
+@media (max-width: 980px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,4 +1,5 @@
 import { createEffect, createMemo, createSignal, onCleanup } from 'solid-js';
+import './Slideshow.css';
 
 const Slideshow = () => {
   const slides = createMemo(() => [

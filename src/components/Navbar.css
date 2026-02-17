@@ -1,0 +1,133 @@
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  background: rgba(244, 247, 246, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15, 28, 22, 0.08);
+}
+
+.nav-spacer {
+  height: 4.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 18px;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--green), #7bf2a1);
+  box-shadow: var(--ring);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.nav-links a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--text);
+  background: rgba(25, 194, 101, 0.12);
+}
+
+.nav-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+}
+
+.nav-menu-btn span {
+  width: 24px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  top: 67px;
+  left: 0;
+  right: 0;
+  background: rgba(244, 247, 246, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15, 28, 22, 0.08);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 4;
+}
+
+.nav-mobile-menu.open {
+  max-height: calc(100vh - 72px);
+}
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 16px 0;
+  color: var(--muted);
+}
+
+.nav-mobile-links a {
+  padding: 14px 24px;
+  font-size: 0.98rem;
+  color: inherit;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-mobile-links a:hover {
+  color: var(--text);
+  background: rgba(25, 194, 101, 0.08);
+  border-left-color: var(--green);
+  padding-left: 21px;
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-menu-btn {
+    display: flex;
+  }
+
+  .nav {
+    padding: 14px 0 10px;
+  }
+}

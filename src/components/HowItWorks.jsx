@@ -1,5 +1,6 @@
 import { For } from 'solid-js';
 import SectionHeader from './SectionHeader';
+import './HowItWorks.css';
 
 const HowItWorks = (props) => {
   const steps = [

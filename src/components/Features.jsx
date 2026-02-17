@@ -1,5 +1,6 @@
 import { For } from 'solid-js';
 import SectionHeader from './SectionHeader';
+import './Features.css';
 
 const Features = (props) => {
   const features = [

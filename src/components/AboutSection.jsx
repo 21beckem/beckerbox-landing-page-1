@@ -1,4 +1,5 @@
 import { Show } from 'solid-js';
+import './AboutSection.css';
 
 const AboutSection = () => {
   return (

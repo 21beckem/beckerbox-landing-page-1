@@ -1,4 +1,5 @@
 import { createSignal } from 'solid-js';
+import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);

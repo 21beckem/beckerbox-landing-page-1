@@ -1,4 +1,5 @@
 import { createEffect, onCleanup, Show } from 'solid-js';
+import './DemoOverlay.css';
 
 const DemoOverlay = (props) => {
   createEffect(() => {

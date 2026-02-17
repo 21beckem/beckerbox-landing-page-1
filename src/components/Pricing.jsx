@@ -1,6 +1,7 @@
 import { For } from 'solid-js';
 import SectionHeader from './SectionHeader';
 import PricingCard from './PricingCard';
+import './Pricing.css';
 
 const Pricing = (props) => {
   const tiers = [

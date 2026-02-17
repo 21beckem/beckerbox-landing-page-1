@@ -1,6 +1,7 @@
 import { createSignal } from "solid-js";
 import PurchaseBtn from "./PurchaseBtn";
 import DemoOverlay from "./DemoOverlay";
+import './Hero.css';
 
 const Hero = (props) => {
   const [isDemoOpen, setIsDemoOpen] = createSignal(false);
@@ -43,7 +44,7 @@ const Hero = (props) => {
         </p> */}
       </div>
         <div class="hero-media">
-          <img src={props.imageSrc} alt="BeckerBox app screenshot" loading="lazy" />
+          <img src={props.imageSrc} title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" />
         </div>
       </section>
       <DemoOverlay

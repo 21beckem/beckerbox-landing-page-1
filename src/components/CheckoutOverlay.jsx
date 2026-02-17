@@ -1,4 +1,5 @@
 import { createEffect, onCleanup, Show } from 'solid-js';
+import './CheckoutOverlay.css';
 
 const CheckoutOverlay = (props) => {
   createEffect(() => {

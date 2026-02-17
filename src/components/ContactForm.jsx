@@ -1,3 +1,5 @@
+import './ContactForm.css';
+
 const ContactForm = () => {
   return (
     <section class="contact-section contact-form-section">

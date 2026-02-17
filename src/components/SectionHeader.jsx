@@ -1,3 +1,5 @@
+import './SectionHeader.css';
+
 const SectionHeader = (props) => {
   return (
     <div class="section-header">

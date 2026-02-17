@@ -1,5 +1,6 @@
 import { For, createSignal, onMount } from 'solid-js';
 import SectionHeader from './SectionHeader';
+import './Faq.css';
 
 const Faq = (props) => {
   const [openIndex, setOpenIndex] = createSignal(-1);

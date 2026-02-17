@@ -1,4 +1,5 @@
 import { For, Show, createMemo, createSignal, onMount } from 'solid-js';
+import './Download.css';
 
 const Download = (props) => {
   const [releases, setReleases] = createSignal([]);

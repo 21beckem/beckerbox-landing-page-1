@@ -1,4 +1,5 @@
 import SectionHeader from './SectionHeader';
+import './Compatibility.css';
 
 const Compatibility = (props) => {
   return (

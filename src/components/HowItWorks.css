@@ -1,0 +1,15 @@
+.how-step {
+  display: grid;
+  gap: 16px;
+}
+
+.step-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(25, 194, 101, 0.15);
+  color: var(--green-dark);
+  font-weight: 700;
+}
