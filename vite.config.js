@@ -15,7 +15,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         contact: resolve(__dirname, 'contact.html'),
         tutorials: resolve(__dirname, 'tutorials.html'),
-        pricing: resolve(__dirname, 'pricing.html')
+        pricing: resolve(__dirname, 'pricing.html'),
+        thankyou: resolve(__dirname, 'thankyou.html')
       }
     }
   },
