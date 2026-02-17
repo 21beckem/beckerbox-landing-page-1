@@ -9,7 +9,7 @@
 }
 
 .nav-spacer {
-  height: 4.5rem;
+  height: 4.3rem;
 }
 
 .nav {
@@ -29,13 +29,10 @@
   gap: 10px;
 }
 
-.logo span {
+.logo img {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--green), #7bf2a1);
-  box-shadow: var(--ring);
+  width: 2rem;
+  height: 2rem;
 }
 
 .nav-links {
@@ -88,6 +85,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  box-shadow: 0 4px 20px -2px rgb(15 28 22 / 22%);
   z-index: 4;
 }
 

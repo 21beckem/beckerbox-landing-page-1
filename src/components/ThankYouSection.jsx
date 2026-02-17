@@ -6,14 +6,14 @@ const ThankYouSection = () => {
       <div class="container">
         <div class="thankyou-card">
           <div class="thankyou-header">
-            <h1>Thanks for Playing! 🎮</h1>
-            <p class="thankyou-subtitle">We hope you had fun with BeckerBox</p>
+            <h1>Thanks for Playing!</h1>
+            <p class="thankyou-subtitle">I hope you had fun with BeckerBox</p>
           </div>
 
           <div class="thankyou-content">
             <div class="thankyou-message">
               <p>
-                Thank you for playing BeckerBox! We hope you enjoyed those nostalgic motion-controlled games and had a blast with your friends.
+                I hope you enjoyed those nostalgic motion-controlled games and had a blast with your friends.
               </p>
               <p>
                 If you'd like to experience BeckerBox whenever you want, you can get it for yourself! It's easy to set up and perfect for game nights with your family.

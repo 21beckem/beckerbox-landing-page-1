@@ -17,7 +17,7 @@ const Navbar = () => {
       <header class="nav-wrap">
         <div class="container nav">
           <a class="logo" href="/">
-            <span aria-hidden="true" />
+            <img src="/images/icon/favicon-32.png" alt="BeckerBox Logo" title="BeckerBox Logo" />
             BeckerBox
           </a>
           <nav class="nav-links">
