@@ -1,0 +1,212 @@
+.thankyou-section {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, rgba(25, 194, 101, 0.1) 0%, rgba(25, 194, 101, 0.05) 100%);
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+}
+
+.thankyou-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.thankyou-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.thankyou-header h1 {
+  font-size: 2.5rem;
+  color: #19c265;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.thankyou-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+
+.thankyou-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.thankyou-message {
+  text-align: center;
+}
+
+.thankyou-message p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.thankyou-message p:last-child {
+  margin-bottom: 0;
+}
+
+.thankyou-actions h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .action-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.action-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.action-card:hover {
+  border-color: #19c265;
+  box-shadow: 0 4px 12px rgba(25, 194, 101, 0.15);
+  transform: translateY(-4px);
+}
+
+.action-icon {
+  font-size: 2.5rem;
+  color: #19c265;
+  margin-bottom: 1rem;
+}
+
+.action-card h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.action-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+}
+
+.action-card .btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.thankyou-footer-message {
+  background: #e8f9f2;
+  border-left: 4px solid #19c265;
+  padding: 1.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.thankyou-footer-message strong {
+  color: #19c265;
+  font-weight: 600;
+}
+
+.thankyou-footer-message a {
+  color: #19c265;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dotted #19c265;
+}
+
+.thankyou-footer-message a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  .thankyou-section {
+    padding: 1rem 0.2rem;
+    min-height: auto;
+  }
+
+  .thankyou-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .thankyou-header {
+    margin-bottom: 2rem;
+  }
+
+  .thankyou-header h1 {
+    font-size: 1.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .thankyou-subtitle {
+    font-size: 1rem;
+  }
+
+  .thankyou-message {
+    margin-bottom: 1.5rem;
+  }
+
+  .thankyou-message p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .thankyou-actions h3 {
+    margin-bottom: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 1.35rem;
+  }
+
+  .action-cards {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .action-card {
+    padding: 1.25rem;
+  }
+
+  .action-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .action-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .action-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .thankyou-footer-message {
+    padding: 1.25rem;
+    font-size: 0.9rem;
+  }
+}
