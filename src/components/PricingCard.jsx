@@ -22,15 +22,18 @@ const PricingCard = (props) => {
         <For each={props.bullets}>{(item) => <li>{item}</li>}</For>
       </ul>
       <div class="hero-cta">
-        <PurchaseBtn
-          class="btn primary"
-          target={props.external ? '_blank' : undefined}
-          rel={props.external ? 'noreferrer' : undefined}
-          aria-disabled={props.comingSoon ? 'true' : 'false'}
-          product={props.product}
-          variant={props.variant}
-          text={props.cta}
-        />
+        <center>
+          <div style="width: 1rem; height: 2rem;"></div>
+          <PurchaseBtn
+            class="btn primary"
+            target={props.external ? '_blank' : undefined}
+            rel={props.external ? 'noreferrer' : undefined}
+            aria-disabled={props.comingSoon ? 'true' : 'false'}
+            product={props.product}
+            variant={props.variant}
+            text={props.cta}
+          />
+        </center>
       </div>
     </div>
   );

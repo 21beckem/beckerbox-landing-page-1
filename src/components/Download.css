@@ -163,6 +163,16 @@
   font-weight: 600;
 }
 
+.download-warning {
+  margin-top: 2rem;
+  background-color: #fff3e0;
+  border-color: #ffcc80;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transform: translateY(-1rem);
+}
+
 @media (max-width: 980px) {
   .download-card {
     grid-template-columns: 1fr;
@@ -176,5 +186,8 @@
 @media (max-width: 600px) {
   .download-meta {
     grid-template-columns: 1fr;
+  }
+  .download-warning {
+    flex-direction: column;
   }
 }

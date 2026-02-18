@@ -156,15 +156,7 @@ const Download = (props) => {
             </div>
           </div>
 
-          <div class="card download-warning" id="download-warning" style="
-            margin-top: 2rem;
-            background-color: #fff3e0;
-            border-color: #ffcc80;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            transform: translateY(-1rem);
-          ">
+          <div class="card download-warning" id="download-warning">
             <i class="fa-solid fa-triangle-exclamation" style="font-size: 1.5rem; margin-right: 0.5rem; color: #ff9800;"></i>
             <div>
               <h3>Your computer will probably say that BeckerBox is not recognized or is unsafe.</h3>
