@@ -1,7 +1,7 @@
 import { createEffect, onCleanup, Show } from 'solid-js';
-import './DemoOverlay.css';
+import './Overlay.css';
 
-const DemoOverlay = (props) => {
+const Overlay = (props) => {
   createEffect(() => {
     if (!props.isOpen) return;
 
@@ -28,19 +28,21 @@ const DemoOverlay = (props) => {
         onClick={props.onClose}
         role="dialog"
         aria-modal="true"
-        aria-label="Becker Box demo"
+        aria-label={props.title}
       >
         <div class="demo-panel" onClick={(event) => event.stopPropagation()}>
           <div class="demo-header">
             <div class="demo-title">
-              <span class="demo-kicker">Live Demo</span>
-              <h3>Becker Box Host</h3>
+              <Show when={props.kicker !== undefined && props.kicker !== null && props.kicker !== ''}>
+                <span class="demo-kicker">{props.kicker}</span>
+              </Show>
+              <h3>{props.title}</h3>
             </div>
             <button
               class="demo-close"
               type="button"
               onClick={props.onClose}
-              aria-label="Close demo"
+              aria-label={`Close ${props.title}`}
             >
               x
             </button>
@@ -49,7 +51,7 @@ const DemoOverlay = (props) => {
             <iframe
               class="demo-frame"
               src={props.demoHref}
-              title="Becker Box demo"
+              title={props.title}
               loading="lazy"
             />
           </div>
@@ -59,4 +61,4 @@ const DemoOverlay = (props) => {
   );
 };
 
-export default DemoOverlay;
+export default Overlay;

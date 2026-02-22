@@ -13,11 +13,7 @@ const App = () => {
   return (
     <div class="page">
       <Navbar />
-      <Hero
-        purchaseHref="#pricing"
-        demoHref="https://r.box.beckersuite.com/v2/host/"
-        imageSrc="/images/beckerbox-hero.png"
-      />
+      <Hero />
       <Slideshow />
       <Faq slim={true} />
       <HowItWorks />

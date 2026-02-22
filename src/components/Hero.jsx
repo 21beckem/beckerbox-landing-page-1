@@ -1,6 +1,6 @@
 import { createSignal } from "solid-js";
 import PurchaseBtn from "./PurchaseBtn";
-import DemoOverlay from "./DemoOverlay";
+import Overlay from "./Overlay";
 import './Hero.css';
 
 const Hero = (props) => {
@@ -32,25 +32,27 @@ const Hero = (props) => {
         </p> */}
         <div class="hero-cta">
           <a class="btn primary" href="/pricing.html">Download</a>
-          {/* <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
-            Launch Demo
-          </button> */}
-          <a class="btn ghost demo-btn" type="button" href="#how">
+          <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
+            See Demo
+          </button>
+          {/* <a class="btn ghost demo-btn" type="button" href="#how">
             Learn More
-          </a>
+          </a> */}
         </div>
         {/* <p class="hero-note">
           Works with iOS and Android. No bundled games or firmware — you use the titles you own.
         </p> */}
       </div>
         <div class="hero-media">
-          <img src={props.imageSrc} title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" />
+          <img src="/images/beckerbox-hero.png" title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" />
         </div>
       </section>
-      <DemoOverlay
+      <Overlay
         isOpen={isDemoOpen()}
         onClose={handleCloseDemo}
-        demoHref={props.demoHref}
+        // kicker="Video Demo"
+        title="Becker Box Demo"
+        demoHref="https://www.youtube.com/embed/qd2TMkiKaPE?autoplay=1&rel=0&fs=0"
       />
     </>
   );
