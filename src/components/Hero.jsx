@@ -33,7 +33,7 @@ const Hero = (props) => {
         <div class="hero-cta">
           <a class="btn primary" href="/pricing.html">Download</a>
           <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
-            See Demo
+            Demo Video
           </button>
           {/* <a class="btn ghost demo-btn" type="button" href="#how">
             Learn More
@@ -52,7 +52,7 @@ const Hero = (props) => {
         onClose={handleCloseDemo}
         // kicker="Video Demo"
         title="Becker Box Demo"
-        demoHref="https://www.youtube.com/embed/qd2TMkiKaPE?autoplay=1&rel=0&fs=0"
+        demoHref="https://www.youtube.com/embed/qd2TMkiKaPE?autoplay=1&rel=0"
       />
     </>
   );
