@@ -18,18 +18,12 @@ const Hero = (props) => {
     <>
       <section class="container hero">
       <div class="hero-copy">
-        <h3 style="
-          width: 100%;
-          max-width: 600px;
-          opacity: 0.9;
-        ">Bring back the motion-controlled living-room games many families grew up with — now powered by your PC and controlled by smartphones.</h3>
-        {/* <p>
-          Bring back the motion-controlled living-room games many families grew up with — now powered by your PC and controlled by smartphones.
-        </p>
+        <h1>Bring back the console games many families grew up with</h1>
         <p>
-          BeckerBox makes your PC feel like a living-room console. Pair in a tap,
-          calibrate in seconds, and start playing together with the phones you already have.
-        </p> */}
+          Turn your <b>computer</b> into the <b>console</b>, turn your <b>phones</b> into the <b>controllers</b>.
+          <br />
+          Play your favorite games just how you remember them
+        </p>
         <div class="hero-cta">
           <a class="btn primary" href="/pricing.html">Download</a>
           <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
@@ -44,6 +38,7 @@ const Hero = (props) => {
         </p> */}
       </div>
         <div class="hero-media">
+          {/* <video src="/videos/console-to-pc.mp4" title="BeckerBox Hero video" alt="BeckerBox app screenshot" loading="lazy" autoplay loop></video> */}
           <img src="/images/beckerbox-hero.png" title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" />
         </div>
       </section>
