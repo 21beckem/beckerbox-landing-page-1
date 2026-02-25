@@ -1,10 +1,14 @@
 .remote {
-    transform: translateZ(25px) translateY(38px) translateX(-20px)
+    transform: translateZ(25px) translateY(38px) translateX(-50px)
         rotateY(-38deg) rotateX(22deg);
     z-index: 1;
 }
 .console {
-    transform: rotateY(20deg) ;
+    transform: translateZ(0px) translateY(0px) translateX(35px)
+        rotateY(20deg) rotateX(0deg);
+}
+.phone {
+    animation: rotateYAnimation 5s linear infinite;
 }
 @keyframes rotateYAnimation {
     from {
