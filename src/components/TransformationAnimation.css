@@ -1,0 +1,11 @@
+.remote {
+    animation: rotateYAnimation 5s linear infinite;
+}
+@keyframes rotateYAnimation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

@@ -1,0 +1,70 @@
+:root {
+    --remote-width: 150px;
+    --remote-height: 350px;
+    --remote-depth: 100px;
+}
+
+.animation-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    perspective: 1000px;
+}
+
+.remote {
+    position: relative;
+    width: var(--remote-width);
+    height: var(--remote-height);
+    transform-style: preserve-3d;
+}
+.remote > * {
+    position: absolute;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    transform-origin: center;
+    top: 0;
+    left: 0;
+}
+
+.remote .front {
+    width: var(--remote-width);
+    height: var(--remote-height);
+    transform: translateZ(calc(var(--remote-depth) / 2));
+}
+.remote .back {
+    width: var(--remote-width);
+    height: var(--remote-height);
+    transform: rotateY(180deg) translateZ(calc(var(--remote-depth) / 2));
+}
+.remote .top {
+    width: var(--remote-width);
+    height: var(--remote-depth);
+    transform: rotateX(90deg) translateZ(calc(var(--remote-depth) / 2));
+}
+.remote .bottom {
+    top: unset;
+    bottom: 0;
+    width: var(--remote-width);
+    height: var(--remote-depth);
+    transform: rotateX(270deg) translateZ(calc(var(--remote-depth) / 2));
+}
+.remote .left {
+    width: var(--remote-depth);
+    height: var(--remote-height);
+    transform: rotateY(-90deg) translateZ(calc(var(--remote-depth) / 2));
+}
+.remote .right {
+    left: unset;
+    right: 0;
+    width: var(--remote-depth);
+    height: var(--remote-height);
+    transform: rotateY(90deg) translateZ(calc(var(--remote-depth) / 2));
+}
