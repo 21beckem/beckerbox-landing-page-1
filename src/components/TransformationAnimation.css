@@ -1,5 +1,10 @@
 .remote {
-    animation: rotateYAnimation 5s linear infinite;
+    transform: translateZ(25px) translateY(38px) translateX(-20px)
+        rotateY(-38deg) rotateX(22deg);
+    z-index: 1;
+}
+.console {
+    transform: rotateY(20deg) ;
 }
 @keyframes rotateYAnimation {
     from {
