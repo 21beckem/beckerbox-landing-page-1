@@ -1,21 +1,20 @@
 :root {
     --remote-width: 60px;
     --remote-height: 250px;
-    --remote-depth: 50px;
+    --remote-depth: 45px;
     --remote-color: #ebebeb;
     --remote-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
+    --remote-button-color: #a8afd0;
+    --remote-button-shadow: 1px 1px 2px rgb(26 26 26 / 17%), inset 0 1px 2px rgb(255 255 255 / 74%);
 
     --console-width: 80px;
     --console-height: 300px;
     --console-depth: 300px;
     --console-color: #ebebeb;
     --console-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
+    --console-disc-slot-color: #777777;
+    --console-disc-slot-shadow: 1px 1px 2px rgb(26 26 26 / 17%), inset 0 1px 2px rgb(255 255 255 / 74%);
 }
-.remote .front,
-.console .front {
-    background-color: gray;
-}
-
 .animation-container {
     position: relative;
     width: 100%;
@@ -40,13 +39,16 @@
 }
 .remote > * {
     position: absolute;
-    background-color: var(--remote-color);
-    box-shadow: var(--remote-shadow);
     transform-origin: center;
     top: 0;
     left: 0;
     pointer-events: none;
 }
+.remote .side {
+    box-shadow: var(--remote-shadow);
+    background-color: var(--remote-color);
+}
+
 
 .remote .front {
     width: var(--remote-width);
@@ -82,6 +84,20 @@
     height: var(--remote-height);
     transform: rotateY(90deg) translateZ(calc(var(--remote-depth) / 2));
 }
+.remote .remote-button1,
+.remote .remote-button2 {
+    width: 20px;
+    height: 20px;
+    background-color: var(--remote-button-color);
+    border-radius: 50%;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateZ(calc(var(--remote-depth) / 2 + 1px));
+    box-shadow: var(--remote-button-shadow);
+}
+.remote .remote-button2 {
+    top: 20%;
+}
 
 
 .console {
@@ -92,12 +108,14 @@
 }
 .console > * {
     position: absolute;
-    box-shadow: var(--console-shadow);
-    background-color: var(--console-color);
     transform-origin: center;
     top: 0;
     left: 0;
     pointer-events: none;
+}
+.console .side {
+    box-shadow: var(--console-shadow);
+    background-color: var(--console-color);
 }
 
 .console .front {
@@ -133,4 +151,14 @@
     width: var(--console-depth);
     height: var(--console-height);
     transform: rotateY(90deg) translateZ(calc(var(--console-depth) / 2));
+}
+.console .disc-slot {
+    width: 10px;
+    height: 80%;
+    background-color: var(--console-disc-slot-color);
+    border-radius: 5px;
+    top: 50%;
+    left: 30%;
+    transform: translateX(-50%) translateY(-50%) translateZ(calc(var(--console-depth) / 2 + 1px));
+    box-shadow: var(--console-disc-slot-shadow);
 }
