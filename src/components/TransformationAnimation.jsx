@@ -6,6 +6,8 @@ const TransformationAnimation = (props) => {
   return (
     <>
       <div class="animation-container">
+        <div class="label drop-console-label">Drop the Console</div>
+        <div class="label use-beckerbox-label">Use what you already have</div>
         <div class="object remote">
             <div class="side front"></div>
             <div class="side back"></div>

@@ -103,7 +103,7 @@
     --spin-duration: 1.8s;
     
     /* == Positions == */
-    --starting: translateZ(55px) translateY(-400px) translateX(125px)
+    --starting: translateZ(55px) translateY(-310px) translateX(125px)
         rotateY(0deg) rotateX(4deg);
     --dropped: translateZ(55px) translateY(90px) translateX(125px)
         rotateY(-360deg) rotateX(-3deg);
@@ -161,4 +161,27 @@
     to {
         filter: var(--screen-on);
     }
+}
+
+
+
+
+
+.label.drop-console-label {
+    opacity: 0;
+    animation: fade-in 0.5s ease-out 2.2s forwards,
+        fade-out 0.5s ease-out 4.2s forwards;
+}
+.label.use-beckerbox-label {
+    opacity: 0;
+    animation: fade-in 0.5s ease-out 6.2s forwards,
+        fade-out 0.5s ease-out 10.2s forwards;
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
