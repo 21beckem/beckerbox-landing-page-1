@@ -26,13 +26,16 @@ const TransformationAnimation = (props) => {
             <div class="extra disc-slot"></div>
         </div>
         <div class="object phone">
-            <div class="side front"></div>
+            <div class="side front">
+              <div class="extra screen">
+                <img src={props.iconSrc} alt="" />
+              </div>
+            </div>
             <div class="side back"></div>
             <div class="side top"></div>
             <div class="side bottom"></div>
             <div class="side left"></div>
             <div class="side right"></div>
-            <div class="extra screen"></div>
         </div>
         <div class="object laptop">
             <div class="keyboard">
@@ -43,10 +46,14 @@ const TransformationAnimation = (props) => {
               <div class="side left"></div>
               <div class="side right"></div>
             </div>
-            <div class="screen">
+            <div class="display">
               <div class="side front"></div>
               <div class="side back"></div>
-              <div class="side top"></div>
+              <div class="side top">
+                <div class="extra screen">
+                  <img src={props.logoSrc} alt="" />
+                </div>
+              </div>
               <div class="side bottom"></div>
               <div class="side left"></div>
               <div class="side right"></div>

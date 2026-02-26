@@ -110,13 +110,18 @@
     --resting: translateZ(55px) translateY(110px) translateX(125px)
         rotateY(calc(var(--spin-count) * -360deg - 31deg)) rotateX(-3deg);
 }
-.laptop .screen {
+.laptop .display {
     --delay: 6.2s;
     --closed: rotateX(180deg);
-    --open: rotateX(290deg);
+    --open: rotateX(275deg);
 
     transform: var(--closed);
     animation: screen-open 1s ease-out var(--delay) forwards;
+}
+.animation-container {
+    --screen-off: brightness(0);
+    --screen-on: brightness(1);
+    --screen-on-delay: 7.2s;
 }
 
 @keyframes drop-on {
@@ -141,5 +146,19 @@
     }
     to {
         transform: var(--open);
+    }
+}
+
+.phone .screen,
+.laptop .display .screen {
+    filter: var(--screen-off);
+    animation: screen-on 0.5s ease-out var(--screen-on-delay) forwards;
+}
+@keyframes screen-on {
+    from {
+        filter: var(--screen-off);
+    }
+    to {
+        filter: var(--screen-on);
     }
 }
