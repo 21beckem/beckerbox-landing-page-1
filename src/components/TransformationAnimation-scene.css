@@ -1,6 +1,6 @@
 .animation-container {
     --remote-width: 60px;
-    --remote-height: 250px;
+    --remote-height: 240px;
     --remote-depth: 45px;
     --remote-color: #ebebeb;
     --remote-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
@@ -17,7 +17,7 @@
 
 
     
-    --phone-width: 120px;
+    --phone-width: 110px;
     --phone-height: var(--remote-height);
     --phone-depth: 20px;
     --phone-color: #323232;
@@ -26,9 +26,9 @@
     --phone-screen-shadow: inset 0 0 10px rgb(60 60 60 / 74%);
     
     
-    --laptop-width: 300px;
+    --laptop-width: 330px;
     --laptop-height: 15px;
-    --laptop-depth: 280px;
+    --laptop-depth: 250px;
     --laptop-color: #323232;
     --laptop-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
     --laptop-screen-color: white;
@@ -42,8 +42,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    border: 1px solid #ccc;
     border-radius: 10px;
     perspective: 1000px;
     overflow: hidden;

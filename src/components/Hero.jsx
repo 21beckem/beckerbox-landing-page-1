@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import PurchaseBtn from "./PurchaseBtn";
+import TransformationAnimation from './TransformationAnimation';
 import Overlay from "./Overlay";
 import './Hero.css';
 
@@ -38,8 +38,11 @@ const Hero = (props) => {
         </p> */}
       </div>
         <div class="hero-media">
-          {/* <video src="/videos/console-to-pc.mp4" title="BeckerBox Hero video" alt="BeckerBox app screenshot" loading="lazy" autoplay loop></video> */}
-          <img src="/images/beckerbox-hero.png" title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" />
+          <TransformationAnimation
+            iconSrc="/images/icon/favicon-96.png"
+            logoSrc="/images/logo-with-words.png"
+          />
+          {/* <img src="/images/beckerbox-hero.png" title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" /> */}
         </div>
       </section>
       <Overlay

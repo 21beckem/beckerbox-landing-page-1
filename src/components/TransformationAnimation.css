@@ -14,7 +14,7 @@
     --float-delay: 2s;
     --float-duration: 2.2s;
     --drop-delay: 4.2s;
-    --drop-duration: 0.05s;
+    --drop-duration: 0.3s;
     
     /* == Positions == */
     --resting: translateZ(25px) translateY(38px) translateX(-50px)
@@ -31,7 +31,7 @@
     --float-delay: 2s;
     --float-duration: 2.2s;
     --drop-delay: 5.2s;
-    --drop-duration: 0.05s;
+    --drop-duration: 0.3s;
     
     /* == Positions == */
     --resting: translateZ(0px) translateY(0px) translateX(35px)
@@ -81,7 +81,7 @@
 .phone {
     /* == Timing == */
     --initial-delay: 4s;
-    --drop-duration: 0.4s;
+    --drop-duration: 0.6s;
     --spin-delay: calc(var(--initial-delay) + var(--drop-duration));
     --spin-count: 2;
     --spin-duration: 1.8s;
@@ -97,7 +97,7 @@
 .laptop {
     /* == Timing == */
     --initial-delay: 5s;
-    --drop-duration: 0.4s;
+    --drop-duration: 0.6s;
     --spin-delay: calc(var(--initial-delay) + var(--drop-duration));
     --spin-count: 2;
     --spin-duration: 1.8s;
