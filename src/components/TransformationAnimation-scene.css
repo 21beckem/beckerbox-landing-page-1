@@ -24,6 +24,15 @@
     --phone-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
     --phone-screen-color: rgb(36, 36, 36);
     --phone-screen-shadow: inset 0 0 10px rgb(60 60 60 / 74%);
+    
+    
+    --laptop-width: 300px;
+    --laptop-height: 15px;
+    --laptop-depth: 300px;
+    --laptop-color: #323232;
+    --laptop-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
+    --laptop-screen-color: rgb(36, 36, 36);
+    --laptop-screen-shadow: inset 0 0 10px rgb(60 60 60 / 74%);
 }
 .animation-container {
     position: relative;
@@ -242,3 +251,89 @@
     transform: translate(-50%, calc(-50% - 2px)) translateZ(calc(var(--phone-depth) / 2 + 1px));
     box-shadow: var(--phone-screen-shadow);
 }
+
+
+
+
+
+.laptop {
+    width: var(--laptop-width);
+    height: var(--laptop-height);
+}
+.laptop .keyboard,
+.laptop .screen {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    width: var(--laptop-width);
+    height: var(--laptop-height);
+}
+.laptop .keyboard > *,
+.laptop .screen > * {
+    position: absolute;
+    transform-origin: center;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.laptop .screen {
+    transform-origin: 0 0 calc(var(--laptop-depth) / -2);
+}
+.laptop .keyboard .side,
+.laptop .screen .side {
+    box-shadow: var(--laptop-shadow);
+    background-color: var(--laptop-color);
+}
+
+
+.laptop .keyboard .front,
+.laptop .screen .front {
+    width: var(--laptop-width);
+    height: var(--laptop-height);
+    transform: translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .keyboard .back,
+.laptop .screen .back {
+    width: var(--laptop-width);
+    height: var(--laptop-height);
+    transform: rotateY(180deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .keyboard .top,
+.laptop .screen .top {
+    width: var(--laptop-width);
+    height: var(--laptop-depth);
+    transform: rotateX(90deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .keyboard .bottom,
+.laptop .screen .bottom {
+    top: unset;
+    bottom: 0;
+    width: var(--laptop-width);
+    height: var(--laptop-depth);
+    transform: rotateX(270deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .keyboard .left,
+.laptop .screen .left {
+    width: var(--laptop-depth);
+    height: var(--laptop-height);
+    transform: rotateY(-90deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .keyboard .right,
+.laptop .screen .right {
+    left: unset;
+    right: 0;
+    width: var(--laptop-depth);
+    height: var(--laptop-height);
+    transform: rotateY(90deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+/* .laptop .keyboard .screen,
+.laptop .screen .screen {
+    width: 90%;
+    height: 90%;
+    background-color: var(--laptop-screen-color);
+    border-radius: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 2px)) translateZ(calc(var(--laptop-depth) / 2 + 1px));
+    box-shadow: var(--laptop-screen-shadow);
+} */

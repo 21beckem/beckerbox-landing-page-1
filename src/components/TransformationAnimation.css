@@ -10,11 +10,26 @@
 .phone {
     animation: rotateYAnimation 5s linear infinite;
 }
+.laptop {
+    transform: rotateY(90deg);
+    /* animation: rotateYAnimation 5s linear infinite; */
+}
+.laptop .screen {
+    animation: rotateXAnimation 5s linear infinite;
+    transform: rotateX(180deg);
+}
 @keyframes rotateYAnimation {
     from {
         transform: rotateY(0deg);
     }
     to {
         transform: rotateY(360deg);
+    }
+}@keyframes rotateXAnimation {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
     }
 }
