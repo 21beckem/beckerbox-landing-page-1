@@ -1,118 +1,61 @@
-.remote {
-    --remote-float-duration: 2.2s;
-    --remote-float-delay: 0.4s;
-    --remote-spin-duration: 2.8s;
-    --remote-spin-delay: 3.2s;
-    --remote-disappear-delay: 6.6s;
-
-    transform: translateZ(25px) translateY(38px) translateX(-50px)
-        rotateY(-38deg) rotateX(22deg);
+.remote, .console {
+    transform: var(--resting);
     transform-origin: 50% 50%;
-    z-index: 2;
-    display: block;
     will-change: transform;
     animation:
-        remote-float-apart var(--remote-float-duration)
-            cubic-bezier(0.22, 0.65, 0.2, 1) var(--remote-float-delay) forwards,
-        remote-spin-fast var(--remote-spin-duration)
-            cubic-bezier(0.2, 0.8, 0.15, 1) var(--remote-spin-delay) forwards,
-        remote-disappear 1ms step-end var(--remote-disappear-delay) forwards;
+        float-apart var(--float-duration)
+            ease-in-out var(--float-delay) forwards,
+        drop-off var(--drop-duration)
+            linear var(--drop-delay) forwards;
+}
+.remote {
+    z-index: 2;
+
+    /* == Timing == */
+    --float-delay: 2s;
+    --float-duration: 2.2s;
+    --drop-delay: 4.2s;
+    --drop-duration: 0.05s;
+    
+    /* == Positions == */
+    --resting: translateZ(25px) translateY(38px) translateX(-50px)
+        rotateY(-38deg) rotateX(22deg);
+    --floated-away: translateZ(140px) translateY(0px) translateX(-191px)
+        rotateY(23deg) rotateX(4deg) rotateZ(0deg);
+    --dropped: translateZ(140px) translateY(300px) translateX(-191px)
+        rotateY(23deg) rotateX(-76deg) rotateZ(0deg);
 }
 .console {
-    --console-float-duration: 2.2s;
-    --console-float-delay: 0.4s;
-    --console-spin-duration: 2.8s;
-    --console-spin-delay: 3.2s;
-    --console-disappear-delay: 6.6s;
-
-    transform: translateZ(0px) translateY(0px) translateX(35px)
-        rotateY(20deg) rotateX(0deg);
-    transform-origin: 50% 50%;
     z-index: 1;
-    display: block;
-    will-change: transform;
-    animation:
-        console-float-apart var(--console-float-duration)
-            cubic-bezier(0.22, 0.65, 0.2, 1) var(--console-float-delay) forwards,
-        console-spin-fast var(--console-spin-duration)
-            cubic-bezier(0.2, 0.8, 0.15, 1) var(--console-spin-delay) forwards,
-        console-disappear 1ms step-end var(--console-disappear-delay) forwards;
+    /* == Timing == */
+    --float-delay: 2s;
+    --float-duration: 2.2s;
+    --drop-delay: 5.2s;
+    --drop-duration: 0.05s;
+    
+    /* == Positions == */
+    --resting: translateZ(0px) translateY(0px) translateX(35px)
+        rotateY(20deg) rotateX(0deg);
+    --floated-away: translateZ(-120px) translateY(30px) translateX(190px)
+        rotateY(-22deg) rotateX(-6deg) rotateZ(90deg);
+    --dropped: translateZ(-120px) translateY(400px) translateX(190px)
+        rotateY(-22deg) rotateX(12deg) rotateZ(90deg);
 }
 
-@keyframes remote-float-apart {
+@keyframes float-apart {
     from {
-        transform: translateZ(25px) translateY(38px) translateX(-50px)
-            rotateY(-38deg) rotateX(22deg);
+        transform: var(--resting);
     }
     to {
-        transform: translateZ(140px) translateY(-20px) translateX(-210px)
-            rotateY(-62deg) rotateX(30deg) rotateZ(-18deg);
+        transform: var(--floated-away);
     }
 }
 
-@keyframes remote-spin-fast {
-    0% {
-        transform: translateZ(140px) translateY(-20px) translateX(-210px)
-            rotateY(-62deg) rotateX(30deg) rotateZ(-18deg);
-    }
-    35% {
-        transform: translateZ(165px) translateY(-36px) translateX(-230px)
-            rotateY(240deg) rotateX(220deg) rotateZ(420deg);
-    }
-    70% {
-        transform: translateZ(178px) translateY(-44px) translateX(-238px)
-            rotateY(620deg) rotateX(500deg) rotateZ(860deg);
-    }
-    100% {
-        transform: translateZ(190px) translateY(-50px) translateX(-245px)
-            rotateY(980deg) rotateX(760deg) rotateZ(1240deg);
-    }
-}
-
-@keyframes remote-disappear {
+@keyframes drop-off {
     from {
-        display: block;
+        transform: var(--floated-away);
     }
     to {
-        display: none;
-    }
-}
-
-@keyframes console-float-apart {
-    from {
-        transform: translateZ(0px) translateY(0px) translateX(35px)
-            rotateY(20deg) rotateX(0deg);
-    }
-    to {
-        transform: translateZ(-120px) translateY(30px) translateX(190px)
-            rotateY(46deg) rotateX(-16deg) rotateZ(14deg);
-    }
-}
-
-@keyframes console-spin-fast {
-    0% {
-        transform: translateZ(-120px) translateY(30px) translateX(190px)
-            rotateY(46deg) rotateX(-16deg) rotateZ(14deg);
-    }
-    35% {
-        transform: translateZ(-146px) translateY(40px) translateX(216px)
-            rotateY(-220deg) rotateX(250deg) rotateZ(-460deg);
-    }
-    70% {
-        transform: translateZ(-166px) translateY(48px) translateX(232px)
-            rotateY(-590deg) rotateX(520deg) rotateZ(-900deg);
-    }
-    100% {
-        transform: translateZ(-180px) translateY(55px) translateX(245px)
-            rotateY(-960deg) rotateX(780deg) rotateZ(-1280deg);
-    }
-}
-
-@keyframes console-disappear {
-    from {
-        display: block;
-    }
-    to {
-        display: none;
+        transform: var(--dropped);
     }
 }
