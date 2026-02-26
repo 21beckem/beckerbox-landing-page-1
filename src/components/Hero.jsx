@@ -16,8 +16,8 @@ const Hero = (props) => {
 
   return (
     <>
-      <section class="container hero">
-      <div class="hero-copy">
+      <section class="container hero" style="width: 100%;">
+      <div class="container hero-copy">
         <h1>Bring back the console games many families grew up with</h1>
         <p>
           Turn your <b>computer</b> into the <b>console</b>, turn your <b>phones</b> into the <b>controllers</b>.

@@ -6,9 +6,10 @@ const TransformationAnimation = (props) => {
   return (
     <>
       <div class="animation-container">
-        <div class="label drop-console-label">Drop the Console</div>
-        <div class="label use-beckerbox-label">Use what you already have</div>
-        <div class="object remote">
+        <div class="scaler">
+          <div class="label drop-console-label">{props.label1 ?? 'Drop the Console'}</div>
+          <div class="label use-beckerbox-label">{props.label2 ?? 'Use what you already have'}</div>
+          <div class="object remote">
             <div class="side front"></div>
             <div class="side back"></div>
             <div class="side top"></div>
@@ -17,8 +18,8 @@ const TransformationAnimation = (props) => {
             <div class="side right"></div>
             <div class="extra remote-button1"></div>
             <div class="extra remote-button2"></div>
-        </div>
-        <div class="object console">
+          </div>
+          <div class="object console">
             <div class="side front"></div>
             <div class="side back"></div>
             <div class="side top"></div>
@@ -26,8 +27,8 @@ const TransformationAnimation = (props) => {
             <div class="side left"></div>
             <div class="side right"></div>
             <div class="extra disc-slot"></div>
-        </div>
-        <div class="object phone">
+          </div>
+          <div class="object phone">
             <div class="side front">
               <div class="extra screen">
                 <img src={props.iconSrc} alt="" />
@@ -38,8 +39,8 @@ const TransformationAnimation = (props) => {
             <div class="side bottom"></div>
             <div class="side left"></div>
             <div class="side right"></div>
-        </div>
-        <div class="object laptop">
+          </div>
+          <div class="object laptop">
             <div class="keyboard">
               <div class="side front"></div>
               <div class="side back"></div>
@@ -60,6 +61,7 @@ const TransformationAnimation = (props) => {
               <div class="side left"></div>
               <div class="side right"></div>
             </div>
+          </div>
         </div>
       </div>
     </>
