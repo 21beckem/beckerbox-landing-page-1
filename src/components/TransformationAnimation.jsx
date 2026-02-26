@@ -25,7 +25,7 @@ const TransformationAnimation = (props) => {
             <div class="side right"></div>
             <div class="extra disc-slot"></div>
         </div>
-        <div class="object phone" style="display: none;">
+        <div class="object phone">
             <div class="side front"></div>
             <div class="side back"></div>
             <div class="side top"></div>
@@ -34,7 +34,7 @@ const TransformationAnimation = (props) => {
             <div class="side right"></div>
             <div class="extra screen"></div>
         </div>
-        <div class="object laptop" style="display: none;">
+        <div class="object laptop">
             <div class="keyboard">
               <div class="side front"></div>
               <div class="side back"></div>

@@ -1,6 +1,5 @@
 .remote, .console {
     transform: var(--resting);
-    transform-origin: 50% 50%;
     will-change: transform;
     animation:
         float-apart var(--float-duration)
@@ -27,6 +26,7 @@
 }
 .console {
     z-index: 1;
+
     /* == Timing == */
     --float-delay: 2s;
     --float-duration: 2.2s;
@@ -58,4 +58,77 @@
     to {
         transform: var(--dropped);
     }
+}
+
+
+
+
+
+
+
+
+
+
+.phone, .laptop {
+    transform: var(--starting);
+    will-change: transform;
+    animation:
+        drop-on var(--drop-duration)
+            cubic-bezier(0.64, 0.01, 1, 1) var(--initial-delay) forwards,
+         spin var(--spin-duration)
+            ease-out var(--spin-delay) forwards; 
+}
+.phone {
+    /* == Timing == */
+    --initial-delay: 4s;
+    --drop-duration: 0.4s;
+    --spin-delay: calc(var(--initial-delay) + var(--drop-duration));
+    --spin-duration: 2.2s;
+    
+    /* == Positions == */
+    --starting: translateZ(140px) translateY(-400px) translateX(-191px)
+        rotateY(0deg) rotateX(4deg);
+    --dropped: translateZ(140px) translateY(0px) translateX(-191px)
+        rotateY(-360deg) rotateX(4deg);
+    --resting: translateZ(140px) translateY(0px) translateX(-191px)
+        rotateY(-1050deg) rotateX(4deg);
+}
+.laptop {
+    /* == Timing == */
+    --initial-delay: 5s;
+    --drop-duration: 0.4s;
+    --spin-delay: calc(var(--initial-delay) + var(--drop-duration));
+    --spin-duration: 2.2s;
+    
+    /* == Positions == */
+    --starting: translateZ(-120px) translateY(-400px) translateX(190px)
+        rotateY(0deg) rotateX(4deg);
+    --dropped: translateZ(-120px) translateY(0px) translateX(190px)
+        rotateY(-360deg) rotateX(4deg);
+    --resting: translateZ(-120px) translateY(0px) translateX(190px)
+        rotateY(-1050deg) rotateX(4deg);
+}
+
+@keyframes drop-on {
+    from {
+        transform: var(--starting);
+    }
+    to {
+        transform: var(--dropped);
+    }
+}
+@keyframes spin {
+    from {
+        transform: var(--dropped);
+    }
+    to {
+        transform: var(--resting);
+    }
+}
+
+.laptop .screen {
+    transform: rotateX(180deg);
+
+    /* open */
+    /* transform: rotateX(290deg); */
 }
