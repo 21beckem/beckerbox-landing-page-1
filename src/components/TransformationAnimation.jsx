@@ -7,8 +7,8 @@ const TransformationAnimation = (props) => {
     <>
       <div class="animation-container">
         <div class="scaler">
-          <div class="label drop-console-label">{props.label1 ?? 'Drop the Console'}</div>
-          <div class="label use-beckerbox-label">{props.label2 ?? 'Use what you already have'}</div>
+          <div class="label drop-console-label">{props.label1 ?? ''}</div>
+          <div class="label use-beckerbox-label">{props.label2 ?? ''}</div>
           <div class="object remote">
             <div class="side front"></div>
             <div class="side back"></div>
@@ -17,16 +17,17 @@ const TransformationAnimation = (props) => {
             <div class="side left"></div>
             <div class="side right"></div>
             <div class="extra remote-button1"></div>
-            <div class="extra remote-button2"></div>
           </div>
           <div class="object console">
-            <div class="side front"></div>
+            <div class="side front">
+              <div class="extra stripe"></div>
+              <div class="extra stripe" style="bottom: -25px"></div>
+            </div>
             <div class="side back"></div>
             <div class="side top"></div>
             <div class="side bottom"></div>
             <div class="side left"></div>
             <div class="side right"></div>
-            <div class="extra disc-slot"></div>
           </div>
           <div class="object phone">
             <div class="side front">

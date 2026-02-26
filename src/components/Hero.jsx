@@ -41,6 +41,8 @@ const Hero = (props) => {
           <TransformationAnimation
             iconSrc="/images/icon/favicon-96.png"
             logoSrc="/images/logo-with-words.png"
+            label1="No console?"
+            label2="Use what you already have"
           />
           {/* <img src="/images/beckerbox-hero.png" title="BeckerBox Hero Image" alt="BeckerBox app screenshot" loading="lazy" /> */}
         </div>

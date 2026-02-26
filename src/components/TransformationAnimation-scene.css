@@ -4,7 +4,7 @@
     --remote-depth: 45px;
     --remote-color: #ebebeb;
     --remote-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
-    --remote-button-color: #a8afd0;
+    --remote-button-color: var(--green);
     --remote-button-shadow: 1px 1px 2px rgb(26 26 26 / 17%), inset 0 1px 2px rgb(255 255 255 / 74%);
 
     --console-width: 80px;
@@ -12,8 +12,8 @@
     --console-depth: 300px;
     --console-color: #ebebeb;
     --console-shadow: inset 0 4px 8px rgba(120, 120, 120, 0.2);
-    --console-disc-slot-color: #777777;
-    --console-disc-slot-shadow: 1px 1px 2px rgb(26 26 26 / 17%), inset 0 1px 2px rgb(255 255 255 / 74%);
+    --console-stripe-color: var(--green);
+    --console-stripe-shadow: 1px 1px 2px rgb(26 26 26 / 17%), inset 0 1px 2px rgb(255 255 255 / 74%);
 
 
     
@@ -131,7 +131,7 @@
     width: 20px;
     height: 20px;
     background-color: var(--remote-button-color);
-    border-radius: 50%;
+    border-radius: 6px;
     top: 35%;
     left: 50%;
     transform: translateX(-50%) translateZ(calc(var(--remote-depth) / 2 + 1px));
@@ -156,6 +156,7 @@
 .console .side {
     box-shadow: var(--console-shadow);
     background-color: var(--console-color);
+    overflow: hidden;
 }
 
 .console .front {
@@ -192,15 +193,15 @@
     height: var(--console-height);
     transform: rotateY(90deg) translateZ(calc(var(--console-depth) / 2));
 }
-.console .disc-slot {
+.console .stripe {
+    position: absolute;
     width: 10px;
-    height: 80%;
-    background-color: var(--console-disc-slot-color);
-    border-radius: 5px;
-    top: 50%;
-    left: 30%;
-    transform: translateX(-50%) translateY(-50%) translateZ(calc(var(--console-depth) / 2 + 1px));
-    box-shadow: var(--console-disc-slot-shadow);
+    height: 100%;
+    background-color: var(--console-stripe-color);
+    bottom: 0;
+    right: 30%;
+    box-shadow: var(--console-stripe-shadow);
+    transform: rotate(45deg);
 }
 
 
