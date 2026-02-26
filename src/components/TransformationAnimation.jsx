@@ -6,7 +6,7 @@ const TransformationAnimation = (props) => {
   return (
     <>
       <div class="animation-container">
-        <div class="object remote" style="display: block;">
+        <div class="object remote">
             <div class="side front"></div>
             <div class="side back"></div>
             <div class="side top"></div>
@@ -16,7 +16,7 @@ const TransformationAnimation = (props) => {
             <div class="extra remote-button1"></div>
             <div class="extra remote-button2"></div>
         </div>
-        <div class="object console" style="display: block;">
+        <div class="object console">
             <div class="side front"></div>
             <div class="side back"></div>
             <div class="side top"></div>
@@ -25,7 +25,7 @@ const TransformationAnimation = (props) => {
             <div class="side right"></div>
             <div class="extra disc-slot"></div>
         </div>
-        <div class="object phone" style="display: block;">
+        <div class="object phone" style="display: none;">
             <div class="side front"></div>
             <div class="side back"></div>
             <div class="side top"></div>
@@ -34,7 +34,7 @@ const TransformationAnimation = (props) => {
             <div class="side right"></div>
             <div class="extra screen"></div>
         </div>
-        <div class="object laptop" style="display: block;">
+        <div class="object laptop" style="display: none;">
             <div class="keyboard">
               <div class="side front"></div>
               <div class="side back"></div>
