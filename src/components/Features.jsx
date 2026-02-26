@@ -12,17 +12,7 @@ const Features = (props) => {
     {
       icon: 'fa-gamepad',
       title: 'Familiar Controls',
-      description: 'Intuitive control layouts that feel familiar.',
-    },
-    {
-      icon: 'fa-keyboard',
-      title: 'Save & Load',
-      description: 'Your controller remembers your preferences.',
-    },
-    {
-      icon: 'fa-handshake',
-      title: 'Easy Pairing',
-      description: 'Family-friendly pairing flow with clear on-screen guidance.',
+      description: 'Intuitive controls that feel familiar.',
     },
     {
       icon: 'fa-mobile',
@@ -30,17 +20,17 @@ const Features = (props) => {
       description: 'Works with the phones you already have, no extra hardware needed.',
     },
     {
-      icon: 'fa-cube',
+      icon: 'fa-compact-disc',
       title: 'Your Games',
       description: 'No bundled games or firmware; you play the titles you already own.',
-    },
+    }
   ];
   return (
     <section class={`section ${props.slim ? 'slim' : ''} ${props.slimTTop ? 'slim-top' : ''} ${props.slimBottom ? 'slim-bottom' : ''}`} id="features">
       <div class="container">
         <SectionHeader
           title="Built for fast, family-friendly play"
-          lead="BeckerBox focuses on the fun with smart tooling, low latency, and a polished UI."
+          lead="All the neat features that you'll need."
         />
         <div class="features-list">
           <For each={features}>

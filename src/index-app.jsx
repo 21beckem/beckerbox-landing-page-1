@@ -6,6 +6,7 @@ import Features from './components/Features';
 import Compatibility from './components/Compatibility';
 import Testimonials from './components/Testimonials';
 import Faq from './components/Faq';
+import MiniCTA from './components/MiniCTA';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Features />
       <Compatibility />
       <Testimonials />
+      <MiniCTA />
       <Footer />
     </div>
   );

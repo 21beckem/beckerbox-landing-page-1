@@ -6,15 +6,15 @@ const HowItWorks = (props) => {
   const steps = [
     {
       title: 'Install BeckerBox',
-      copy: 'Set up the desktop app and launch the pairing hub on your PC in minutes.',
+      copy: 'Set up the desktop app and launch it on your computer.',
     },
     {
       title: 'Pair your phones',
-      copy: 'Scan once, tap to connect, and each phone becomes a motion remote instantly.',
+      copy: 'Scan once, tap to connect, and each phone instantly becomes a console remote.',
     },
     {
-      title: 'Calibrate & play',
-      copy: 'Run a three-gesture calibration and start playing together right away.',
+      title: 'Click Start',
+      copy: 'It\'s that easy! Now you can play your games together, no matter where you are.',
     },
   ];
   return (

@@ -1,0 +1,16 @@
+.bottom-cta {
+  text-align: center;
+}
+
+.bottom-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.bottom-cta p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  color: var(--text);
+}
