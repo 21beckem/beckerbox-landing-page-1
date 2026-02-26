@@ -292,17 +292,26 @@
     height: var(--laptop-height);
     transform: translateZ(calc(var(--laptop-depth) / 2));
 }
+.laptop .screen .front {
+    transform: translateZ(calc(var(--laptop-depth) * -.5));
+}
 .laptop .keyboard .back,
 .laptop .screen .back {
     width: var(--laptop-width);
     height: var(--laptop-height);
     transform: rotateY(180deg) translateZ(calc(var(--laptop-depth) / 2));
 }
+.laptop .screen .back {
+    transform: rotateY(180deg) translateZ(calc(var(--laptop-depth) * 1.5));
+}
 .laptop .keyboard .top,
 .laptop .screen .top {
     width: var(--laptop-width);
     height: var(--laptop-depth);
     transform: rotateX(90deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .screen .top {
+    transform: translateZ(calc(var(--laptop-depth) * -1)) rotateX(90deg) translateZ(calc(var(--laptop-depth) / 2));
 }
 .laptop .keyboard .bottom,
 .laptop .screen .bottom {
@@ -312,11 +321,17 @@
     height: var(--laptop-depth);
     transform: rotateX(270deg) translateZ(calc(var(--laptop-depth) / 2));
 }
+.laptop .screen .bottom {
+    transform: translateZ(calc(var(--laptop-depth) * -1)) rotateX(270deg) translateZ(calc(var(--laptop-depth) / 2));
+}
 .laptop .keyboard .left,
 .laptop .screen .left {
     width: var(--laptop-depth);
     height: var(--laptop-height);
     transform: rotateY(-90deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .screen .left {
+    transform: translateZ(calc(var(--laptop-depth) * -1)) rotateY(-90deg) translateZ(calc(var(--laptop-depth) / 2));
 }
 .laptop .keyboard .right,
 .laptop .screen .right {
@@ -325,6 +340,9 @@
     width: var(--laptop-depth);
     height: var(--laptop-height);
     transform: rotateY(90deg) translateZ(calc(var(--laptop-depth) / 2));
+}
+.laptop .screen .right {
+    transform: translateZ(calc(var(--laptop-depth) * -1)) rotateY(90deg) translateZ(calc(var(--laptop-depth) / 2));
 }
 /* .laptop .keyboard .screen,
 .laptop .screen .screen {
