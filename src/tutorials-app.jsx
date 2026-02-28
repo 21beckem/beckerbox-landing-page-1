@@ -64,7 +64,9 @@ const App = () => {
       console.error('Failed to load tutorial:', response.statusText);
       return;
     }
-    deckEl.innerHTML = await response.text();
+    deckEl.innerHTML = `
+      <i class="   fullscreen-btn fa-solid fa-up-right-and-down-left-from-center"></i>
+      <i class="un-fullscreen-btn fa-solid fa-down-left-and-up-right-to-center"></i>` + await response.text();
     if (!deckEl.querySelector('.slides')) {
       console.error('Invalid tutorial format: missing .slides container');
       return;
@@ -73,6 +75,13 @@ const App = () => {
     // mount deck
     document.getElementById('tutorials-hero-panel').innerHTML = '';
     document.getElementById('tutorials-hero-panel').appendChild(deckEl);
+
+    document.querySelector('.fullscreen-btn').addEventListener('click', () => {
+      deckEl.classList.add('fullscreen');
+    });
+    document.querySelector('.un-fullscreen-btn').addEventListener('click', () => {
+      deckEl.classList.remove('fullscreen');
+    });
 
     // initialize deck
     deck = new Reveal(deckEl, {
