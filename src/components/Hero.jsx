@@ -25,7 +25,7 @@ const Hero = (props) => {
           Play your favorite games just how you remember them
         </p>
         <div class="hero-cta">
-          <a class="btn primary" href="/pricing.html">Download</a>
+          <a class="btn primary" href="/download.html">Download</a>
           <button class="btn ghost demo-btn" type="button" onClick={handleOpenDemo}>
             Demo Video
           </button>
