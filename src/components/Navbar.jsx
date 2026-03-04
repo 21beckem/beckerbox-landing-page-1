@@ -21,7 +21,7 @@ const Navbar = () => {
             BeckerBox
           </a>
           <nav class="nav-links">
-            <a href="/#how">How It Works</a>
+            <a href="/about.html">About</a>
             <a href="/#faq">FAQ</a>
             <a href="/tutorials.html">Tutorials</a>
             <a href="/contact.html">Contact</a>
@@ -41,13 +41,12 @@ const Navbar = () => {
         </div>
       </header>
       <div class={`nav-mobile-menu ${isMenuOpen() ? 'open' : ''}`}>
-        <nav class="nav-mobile-links">
-          <a href="/#how" onClick={closeMenu}>How It Works</a>
-          <a href="/#features" onClick={closeMenu}>Features</a>
-          <a href="/#faq" onClick={closeMenu}>FAQ</a>
-          <a href="/tutorials.html" onClick={closeMenu}>Tutorials</a>
-          <a href="/contact.html" onClick={closeMenu}>Contact</a>
-          <a href="/download.html" onClick={closeMenu}>Purchase</a>
+        <nav class="nav-mobile-links" onClick={closeMenu}>
+          <a href="/about.html">About</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/tutorials.html">Tutorials</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/download.html">Download</a>
         </nav>
       </div>
       <div class="nav-spacer"></div>

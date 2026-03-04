@@ -1,0 +1,47 @@
+.about-page-hero {
+  padding-top: 24px;
+}
+
+.about-page-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--green-dark);
+  background: rgba(25, 194, 101, 0.12);
+  border: 1px solid rgba(25, 194, 101, 0.25);
+  border-radius: 999px;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+}
+
+.about-page-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  max-width: 720px;
+  margin-bottom: 14px;
+}
+
+.about-page-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about-page-item + .about-page-item {
+  margin-top: 28px;
+}
+
+.about-page-item h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.about-page-item p {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1.06rem;
+}
