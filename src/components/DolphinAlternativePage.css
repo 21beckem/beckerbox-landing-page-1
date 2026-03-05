@@ -1,5 +1,13 @@
 .dolphin-alt-hero {
   padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.dolphin-hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 48px;
+  align-items: center;
 }
 
 .dolphin-alt-kicker {
@@ -33,6 +41,161 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.dolphin-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo-comparison {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: center;
+  position: relative;
+}
+
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: scale(1.05);
+}
+
+.logo-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(10, 40, 25, 0.15));
+  transition: filter 0.3s ease;
+}
+
+.dolphin-logo {
+  transform: rotate(-8deg) translateY(-10px);
+}
+
+.beckerbox-logo {
+  transform: rotate(8deg) translateY(10px);
+}
+
+.logo-item:hover img {
+  filter: drop-shadow(0 12px 32px rgba(10, 40, 25, 0.25));
+}
+
+.logo-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: center;
+}
+
+.dolphin-logo .logo-label {
+  color: #c93f3f;
+}
+
+.beckerbox-logo .logo-label {
+  color: var(--green-dark);
+}
+
+.vs-divider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.vs-divider > span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--card);
+  padding: 6px 18px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(10, 40, 25, 0.1);
+  border: 2px solid rgba(15, 28, 22, 0.08);
+}
+
+.arrow-transition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-transition i {
+  font-size: 1.8rem;
+  color: var(--green);
+  animation: arrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 980px) {
+  .dolphin-hero-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .dolphin-hero-visual {
+    order: -1;
+  }
+  
+  .logo-comparison {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .dolphin-logo {
+    transform: rotate(-8deg);
+  }
+
+  .beckerbox-logo {
+    transform: rotate(8deg);
+  }
+  
+  .vs-divider {
+    flex-direction: row;
+    margin: 0;
+  }
+  
+  .arrow-transition i {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-item img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .vs-divider > span {
+    font-size: 1.1rem;
+    padding: 4px 14px;
+  }
+  
+  .logo-label {
+    font-size: 0.8rem;
+  }
 }
 
 .dolphin-comparisons-wrap {

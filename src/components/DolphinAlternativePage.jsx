@@ -28,7 +28,6 @@ const comparisons = [
     description: 'Setting up controllers so your friends can actually play with you.',
     icon: 'fa-gamepad',
     imageLabel: 'Controller Setup',
-    reverse: true,
     dolphinPoints: [
       { type: 'con', text: 'Need physical controllers or manual input mapping' },
       { type: 'con', text: 'Bluetooth pairing can be inconsistent on PC' },
@@ -44,32 +43,31 @@ const comparisons = [
       { type: 'pro', text: 'Everyone can use their own phone they already own' },
     ],
   },
-  {
-    title: 'Game Library Management',
-    description: 'Organizing and launching your game collection.',
-    icon: 'fa-th-large',
-    imageLabel: 'Game Library',
-    dolphinPoints: [
-      { type: 'neutral', text: 'Manual file browser navigation to games' },
-      { type: 'con', text: 'No built-in game art or metadata' },
-      { type: 'con', text: 'Requires understanding file paths and formats' },
-      { type: 'neutral', text: 'Works with any file structure' },
-      { type: 'con', text: 'No streamlined game night launch experience' },
-    ],
-    beckerboxPoints: [
-      { type: 'pro', text: 'Visual game library with cover art' },
-      { type: 'pro', text: 'Automatic game detection and organization' },
-      { type: 'pro', text: 'Quick-launch interface designed for living room TV' },
-      { type: 'pro', text: 'Recently played and favorites tracking' },
-      { type: 'pro', text: 'Family-friendly browsing experience' },
-    ],
-  },
+//   {
+//     title: 'Game Library Management',
+//     description: 'Organizing and launching your game collection.',
+//     icon: 'fa-th-large',
+//     imageLabel: 'Game Library',
+//     dolphinPoints: [
+//       { type: 'neutral', text: 'Manual file browser navigation to games' },
+//       { type: 'con', text: 'No built-in game art or metadata' },
+//       { type: 'con', text: 'Requires understanding file paths and formats' },
+//       { type: 'neutral', text: 'Works with any file structure' },
+//       { type: 'con', text: 'No streamlined game night launch experience' },
+//     ],
+//     beckerboxPoints: [
+//       { type: 'pro', text: 'Visual game library with cover art' },
+//       { type: 'pro', text: 'Automatic game detection and organization' },
+//       { type: 'pro', text: 'Quick-launch interface designed for living room TV' },
+//       { type: 'pro', text: 'Recently played and favorites tracking' },
+//       { type: 'pro', text: 'Family-friendly browsing experience' },
+//     ],
+//   },
   {
     title: 'Daily Usage & Session Startup',
     description: 'The experience of starting a game when friends come over.',
     icon: 'fa-play-circle',
     imageLabel: 'Starting Games',
-    reverse: true,
     dolphinPoints: [
       { type: 'con', text: 'Navigate through emulator menus and settings' },
       { type: 'con', text: 'Verify controller connections before each session' },
@@ -110,7 +108,6 @@ const comparisons = [
     description: 'Getting games to run smoothly on your system.',
     icon: 'fa-sliders-h',
     imageLabel: 'Performance',
-    reverse: true,
     dolphinPoints: [
       { type: 'neutral', text: 'Deep control over graphics backend and enhancements' },
       { type: 'con', text: 'Requires technical knowledge to optimize' },
@@ -171,21 +168,46 @@ const DolphinAlternativePage = () => {
     <>
       <section class="dolphin-alt-hero section slim-bottom">
         <div class="container">
-          <p class="dolphin-alt-kicker">Dolphin Alternative</p>
-          <h1>A simpler way to play than using Dolphin Emulator alone.</h1>
-          <p class="lead">
-            See the real differences across setup, controllers, daily use, and troubleshooting—with less friction and more time playing.
-          </p>
-          <div class="dolphin-alt-cta">
-            <a class="btn primary" href="/download.html">Get BeckerBox</a>
-            <a class="btn ghost" href="#comparison">See the Differences</a>
+          <div class="dolphin-hero-content">
+            <div class="dolphin-hero-text">
+              <p class="dolphin-alt-kicker">Dolphin Alternative</p>
+              <h1>A simpler way to play than using Dolphin Emulator alone.</h1>
+              <p class="lead">
+                Let's look through the main differences!
+              </p>
+              <div class="dolphin-alt-cta">
+                <a class="btn primary" href="/download.html">Get BeckerBox</a>
+                <a class="btn ghost" href="#comparison">See the Differences</a>
+              </div>
+            </div>
+            
+            <div class="dolphin-hero-visual">
+              <div class="logo-comparison">
+                <div class="logo-item dolphin-logo">
+                  <img src="/images/dolphin-emu.png" alt="Dolphin Emulator" />
+                  <span class="logo-label">Complex Setup</span>
+                </div>
+                
+                <div class="vs-divider">
+                  <span>VS</span>
+                  <div class="arrow-transition">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+                
+                <div class="logo-item beckerbox-logo">
+                  <img src="/images/icon/favicon-500.png" alt="BeckerBox" />
+                  <span class="logo-label">Simple & Fast</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <div class="dolphin-comparisons-wrap" id="comparison">
         <div class="container">
-          {comparisons.map((comparison) => (
+          {comparisons.map((comparison, index) => (
             <ComparisonSection
               title={comparison.title}
               description={comparison.description}
@@ -193,7 +215,7 @@ const DolphinAlternativePage = () => {
               imageLabel={comparison.imageLabel}
               dolphinPoints={comparison.dolphinPoints}
               beckerboxPoints={comparison.beckerboxPoints}
-              reverse={comparison.reverse}
+              reverse={index % 2 === 1}
             />
           ))}
         </div>

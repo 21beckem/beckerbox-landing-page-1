@@ -147,6 +147,9 @@
 }
 
 @media (max-width: 980px) {
+  .comparison-section-media {
+    display: none;
+  }
   .comparison-section-content {
     grid-template-columns: 1fr;
   }
