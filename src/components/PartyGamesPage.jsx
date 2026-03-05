@@ -4,51 +4,159 @@ import './PartyGamesPage.css';
 
 const gameCategories = [
   {
-    title: 'Competitive Chaos',
-    icon: 'fa-trophy',
-    description: 'Games that bring out the rivalry and competitive spirit',
+    title: 'Competitive Parties',
+    description: 'Games where people want to win and everyone\'s trying hard. Expect trash talk and close calls.',
     games: [
-      { name: 'Super Smash Bros. Brawl', type: 'Fighting' },
-      { name: 'Mario Kart Wii', type: 'Racing' },
-      { name: 'Mario Party 8', type: 'Party' },
-      { name: 'Super Smash Bros. Melee', type: 'Fighting' },
-      { name: 'Wii Sports Resort', type: 'Sports' },
+      {
+        name: 'Super Smash Bros. Brawl',
+        desc: 'A fast multiplayer fighter that works for both casual play and serious competition.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl',
+      },
+      {
+        name: 'Mario Kart Wii',
+        desc: 'Simple to learn racing with enough depth to stay interesting over many rounds.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+      },
+      {
+        name: 'Mario Party 8',
+        desc: 'Board-game structure plus mini-games keeps competition fun even for mixed skill groups.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Party_8',
+      },
+      {
+        name: 'Wii Sports Resort',
+        desc: 'Motion sports events that feel intuitive and still get competitive quickly.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Sports_Resort',
+      },
     ],
   },
   {
-    title: 'Casual Hangout Vibes',
-    icon: 'fa-heart',
-    description: 'Easy-to-jump-into games perfect for just hanging out',
+    title: 'Casual Hangouts',
+    description: 'Games you can play while talking with friends. No pressure, low stakes, pure fun.',
     games: [
-      { name: 'Wii Sports', type: 'Sports' },
-      { name: 'Bowling', type: 'Sports' },
-      { name: 'Wii Fit Plus', type: 'Fitness' },
-      { name: 'Mario Party 9', type: 'Party' },
-      { name: 'Just Dance series', type: 'Rhythm' },
+      {
+        name: 'Wii Sports',
+        desc: 'Bowling and tennis are still some of the easiest games to hand to new players.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Sports',
+      },
+      {
+        name: 'Wii Play',
+        desc: 'Mini-games with very low learning curve, good for short turns and mixed groups.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Play',
+      },
+      {
+        name: 'Just Dance (series)',
+        desc: 'Good fit for groups that want movement, music, and a relaxed atmosphere.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Just_Dance_(video_game_series)',
+      },
+      {
+        name: 'Mario Kart Wii',
+        desc: 'Still works well in casual mode when you want shorter, lower-stress rounds.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+      },
     ],
   },
   {
-    title: 'Team Battle Royale',
-    icon: 'fa-users',
-    description: 'Cooperative and team-based matches for groups',
+    title: 'Games for 4 Players',
+    description: 'These games handle the full 4-player count and stay fun the entire time.',
     games: [
-      { name: 'Kirby\'s Return to Dream Land', type: 'Co-op' },
-      { name: 'Donkey Kong Country Returns', type: 'Co-op' },
-      { name: 'New Super Mario Bros. Wii', type: 'Co-op' },
-      { name: 'Wii Sports Team Mode', type: 'Sports' },
-      { name: 'Four Swords Adventures', type: 'Co-op' },
+      {
+        name: 'Mario Party 8',
+        desc: 'Designed around rotation and mini-games, so 4-player sessions stay active.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Party_8',
+      },
+      {
+        name: 'Mario Kart Wii',
+        desc: 'Quick race length makes it easy to run tournament-style 4-player sets.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+      },
+      {
+        name: 'Super Smash Bros. Brawl',
+        desc: '4-player free-for-all and team options keep everyone involved each match.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl',
+      },
+      {
+        name: 'Wii Party',
+        desc: 'Party-focused structure built for full groups and repeated rounds.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Party',
+      },
     ],
   },
   {
-    title: 'Crowd Pleasers',
-    icon: 'fa-star',
-    description: 'Games that work for mixed skill levels and ages',
+    title: 'Date Night - 2 Players',
+    description: 'Games where you and one other person can actually have fun without a crowd.',
     games: [
-      { name: 'Wii Sports Resort', type: 'Sports' },
-      { name: 'Mario Party 8', type: 'Party' },
-      { name: 'Wii Play', type: 'Mini-games' },
-      { name: 'Mario Kart: Double Dash', type: 'Racing' },
-      { name: 'Wii U Nintendo Land', type: 'Party' },
+      {
+        name: 'Mario Kart Wii',
+        desc: 'Solid head-to-head racing for a direct two-player session.',
+        players: '2 players (recommended)',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+      },
+      {
+        name: 'Wii Sports (Tennis/Bowling)',
+        desc: 'Straightforward two-player matches with very little setup or explanation.',
+        players: '2 players (recommended)',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Sports',
+      },
+      {
+        name: 'Kirby\'s Return to Dream Land',
+        desc: 'Co-op platforming that works well when both players want a shared run.',
+        players: '2 players (recommended)',
+        wiki: 'https://en.wikipedia.org/wiki/Kirby%27s_Return_to_Dream_Land',
+      },
+      {
+        name: 'Donkey Kong Country Returns',
+        desc: 'A good cooperative option if you want challenge and teamwork.',
+        players: '2 players',
+        wiki: 'https://en.wikipedia.org/wiki/Donkey_Kong_Country_Returns',
+      },
+    ],
+  },
+  {
+    title: 'The Classics - Most Popular Wii Games',
+    description: 'These games are popular for a reason. They\'re the ones everyone remembers playing.',
+    games: [
+      {
+        name: 'Wii Sports',
+        desc: 'A baseline recommendation because nearly everyone understands it instantly.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Sports',
+      },
+      {
+        name: 'Mario Kart Wii',
+        desc: 'One of the most replayable Wii games with broad appeal for all skill levels.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+      },
+      {
+        name: 'Super Smash Bros. Brawl',
+        desc: 'A long-standing favorite that supports both competitive and casual styles.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl',
+      },
+      {
+        name: 'Wii Sports Resort',
+        desc: 'Expanded sports set with tighter motion controls than the original.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Wii_Sports_Resort',
+      },
+      {
+        name: 'Mario Party 8',
+        desc: 'Still one of the easiest ways to run a full, social game night.',
+        players: '1-4 players',
+        wiki: 'https://en.wikipedia.org/wiki/Mario_Party_8',
+      },
     ],
   },
 ];
@@ -56,83 +164,79 @@ const gameCategories = [
 const whyBeckerbox = [
   {
     icon: 'fa-phone-alt',
-    title: 'Everyone Uses Their Own Phone',
-    description: 'No need to buy multiple controllers ($60 each). Everyone already has a smartphone.',
+    title: 'Everyone Already Has a Phone',
+    description: 'No need to buy extra controllers. Phones work as controllers.',
   },
   {
-    icon: 'fa-flash',
-    title: 'Setup in Minutes, Playing in Minutes',
-    description: 'Scan a QR code and you\'re in. From download to first game: under 10 minutes.',
+    icon: 'fa-bolt',
+    title: 'Setup Takes Minutes',
+    description: 'Scan a QR code, phones connect. You\'re playing in under 5 minutes.',
   },
   {
     icon: 'fa-compact-disc',
-    title: 'Hundreds of Games Ready to Play',
-    description: 'Access to a massive library of classic games. Something for every crowd and skill level.',
+    title: 'Huge Game Library',
+    description: 'Access to all your favorite Wii games. Everything from sports to party games.',
   },
   {
     icon: 'fa-wallet',
-    title: 'Save Hundreds on Hardware',
-    description: 'One software purchase beats$300+ console + $60 per controller. Game smart.',
+    title: 'Actually Affordable',
+    description: 'One software cost beats buying a $300 console and $60+ per controller.',
   },
   {
     icon: 'fa-gamepad',
-    title: 'Intuitive Controls Anyone Can Use',
-    description: 'Familiar motion and button controls. Your non-gamer friends will understand immediately.',
+    title: 'Familiar Controls',
+    description: 'Motion controls and button inputs work like the original. No learning curve.',
   },
   {
     icon: 'fa-users-cog',
-    title: 'Perfect for Large Groups',
-    description: 'Supports up to 4 players, instant game switching, and everyone stays engaged.',
+    title: 'Built for Groups',
+    description: 'Up to 4 players on phones. Each person controls their own game.',
   },
 ];
 
 const gameNightSteps = [
   {
     title: 'Download & Install',
-    copy: 'Get BeckerBox on your PC. Installation takes less than 2 minutes.',
+    copy: 'Get BeckerBox on your PC and launch it.',
   },
   {
-    title: 'Friends Show Up',
-    copy: 'Invite people over. Have them bring their phones (everyone has one).',
-  },
-  {
-    title: 'Scan & Connect',
-    copy: 'Each friend scans the QR code. Phones connect instantly as controllers.',
+    title: 'Connect Your Phones',
+    copy: 'Everyone scans the QR code. Their phone becomes a controller.',
   },
   {
     title: 'Pick a Game',
-    copy: 'Choose from your library and hit start. No complicated setup menus.',
+    copy: 'Choose from your library and start playing.',
   },
   {
-    title: 'Play Together',
-    copy: 'Enjoy instant, responsive gameplay. Switch games between rounds in seconds.',
+    title: 'That\'s It',
+    copy: 'No setup menus, no configuration. Just play.',
   },
 ];
 
 const partyFaqs = [
   {
-    q: 'How many people can play at once?',
-    a: 'BeckerBox supports up to <b>4 simultaneous players</b> with smartphone controllers. You can easily rotate players between games, so larger groups can all participate throughout the night.'
+    q: 'How many players can actually play at the same time?',
+    a: '<b>4 players maximum</b> with smartphone controllers connected at once. That\'s the Wii limit.'
   },
   {
     q: 'What if someone doesn\'t have a smartphone?',
-    a: 'Most people will have phones, but if needed, you can mix smartphone controllers with traditional USB controllers or Wii controllers. BeckerBox supports multiple input types so everyone can join.'
+    a: 'Most people will have phones. If not, you can also use traditional USB controllers alongside the phone controllers.'
   },
   {
-    q: 'Do the games have tutorials or learning curves?',
-    a: 'Most games in the party library are <b>designed to be picked up immediately</b>. Wii Sports, Mario Kart, and other party classics have minimal learning curves. You\'ll be playing within seconds.'
+    q: 'How long does it take to learn these games?',
+    a: 'Most of these games are designed to be picked up immediately. Wii Sports, Mario Kart - you can play them competently in minutes.'
   },
   {
-    q: 'Can we switch games quickly between rounds?',
-    a: '<b>Yes!</b> Game switching is instant. Pick a new game and you\'re ready to play in seconds. No lengthy load times or complicated menu navigation.'
+    q: 'Can we switch games quickly?',
+    a: 'Yes. You can switch between games in seconds once everyone is connected.'
   },
   {
-    q: 'How much does it cost total?',
-    a: 'You pay a one-time software cost for BeckerBox. <b>No additional controller purchases needed</b> (everyone uses their phone). Compare that to a $300 console + $240+ for four controllers, and the savings are huge.'
+    q: 'What does BeckerBox cost?',
+    a: 'One software purchase. Compare that to a $300 console plus $60 per extra controller, and it\'s worth it.'
   },
   {
-    q: 'What\'s the actual setup time from zero to first game?',
-    a: 'Typically <b>under 10 minutes</b>. Download BeckerBox, friends arrive, scan QR codes to connect phones, pick a game, and play. We designed it for fast game nights, not troubleshooting.'
+    q: 'What\'s the actual time from download to playing?',
+    a: 'Realistically, 5-10 minutes. Download, launch, scan QR codes, pick a game.'
   },
 ];
 
@@ -144,14 +248,14 @@ const PartyGamesPage = () => {
         <div class="container">
           <div class="party-hero-content">
             <div class="party-hero-text">
-              <p class="party-kicker">🎮 Game Night Made Simple</p>
-              <h1>The Ultimate Party Game Solution</h1>
+              <p class="party-kicker">Party Games Made Simple</p>
+              <h1>The Best Wii Games for Game Night</h1>
               <p class="lead">
-                Forget complicated setups and expensive hardware. BeckerBox turns your computer and smartphones into the ultimate group gaming experience. Host epic game nights where everyone plays together at the same time.
+                Wii games are still the best for getting people together to play. BeckerBox lets you play them on your PC using phones as controllers. No console, no expensive controllers, no complicated setup.
               </p>
               <div class="party-hero-cta">
-                <a class="btn primary" href="/download.html">Start Your Game Night</a>
-                <a class="btn ghost" href="#games">See Games</a>
+                <a class="btn primary" href="/download.html">Get Started</a>
+                <a class="btn ghost" href="#games">See the Games</a>
               </div>
             </div>
             
@@ -163,7 +267,7 @@ const PartyGamesPage = () => {
                   <div class="phone-mock phone-3">📱</div>
                   <div class="phone-mock phone-4">📱</div>
                 </div>
-                <div class="visual-label">4 Players, 4 Phones, 1 Game</div>
+                <div class="visual-label">4 players on phones</div>
               </div>
             </div>
           </div>
@@ -174,31 +278,55 @@ const PartyGamesPage = () => {
       <section class="section" id="games">
         <div class="container">
           <SectionHeader 
-            title="Games Built for Parties" 
-            lead="Every category has something everyone will love. Pick one, hit start, and let the fun begin."
+            title="Best Wii Games for Different Situations" 
+            lead="Wii games work best when you pick the right one for the moment. Here's what works."
           />
-          <div class="game-categories-grid">
+          <div class="party-game-comparison-wrap">
             <For each={gameCategories}>
-              {(category) => (
-                <div class="game-category-card">
-                  <div class="category-header">
-                    <div class="category-icon">
-                      <i class={`fa-solid ${category.icon}`}></i>
+              {(category, index) => (
+                <section class={`party-game-comparison ${index() % 2 === 1 ? 'reverse' : ''}`}>
+                  <div class="party-game-comparison-content">
+                    <div class="party-game-text">
+                      <div class="party-game-header">
+                        <h3>{category.title}</h3>
+                        <p class="category-description">{category.description}</p>
+                      </div>
+
+                      <div class="party-game-list">
+                        <For each={category.games}>
+                          {(game) => (
+                            <article class="party-game-row">
+                              <h4>{game.name}</h4>
+                              <p class="game-desc">{game.desc}</p>
+                              <div class="game-meta">
+                                <span><strong>Players:</strong> {game.players}</span>
+                                <a href={game.wiki} target="_blank" rel="noopener noreferrer">Wikipedia</a>
+                              </div>
+                            </article>
+                          )}
+                        </For>
+                      </div>
                     </div>
-                    <h3>{category.title}</h3>
+
+                    <div class="party-game-media">
+                      <div class="cover-fan" aria-label={`Cover art fan for ${category.title}`}>
+                        <For each={category.games}>
+                          {(game, gameIndex) => (
+                            <img
+                              src="https://art.gametdb.com/wii/cover3D/US/RSPE01.png"
+                              alt={`${game.name} cover art placeholder`}
+                              class="fan-cover"
+                              style={{ '--fan-index': gameIndex() }}
+                            />
+                          )}
+                        </For>
+                      </div>
+                      <p class="cover-disclaimer">
+                        Cover images shown are placeholders for layout preview only. I do not own rights to these images.
+                      </p>
+                    </div>
                   </div>
-                  <p class="category-description">{category.description}</p>
-                  <div class="games-list">
-                    <For each={category.games}>
-                      {(game) => (
-                        <div class="game-item">
-                          <span class="game-name">{game.name}</span>
-                          <span class="game-type">{game.type}</span>
-                        </div>
-                      )}
-                    </For>
-                  </div>
-                </div>
+                </section>
               )}
             </For>
           </div>
@@ -209,8 +337,8 @@ const PartyGamesPage = () => {
       <section class="section party-features">
         <div class="container">
           <SectionHeader 
-            title="Why BeckerBox Wins for Parties" 
-            lead="We built this specifically for group gaming. Here's what makes it special."
+            title="Why Use BeckerBox Instead of a Wii" 
+            lead="You probably don't have a Wii anymore. Here's why BeckerBox is a better solution than tracking one down."
           />
           <div class="party-features-grid">
             <For each={whyBeckerbox}>
@@ -232,8 +360,8 @@ const PartyGamesPage = () => {
       <section class="section party-flow slim-top">
         <div class="container">
           <SectionHeader 
-            title="Your Game Night Timeline" 
-            lead="From zero to playing together in under 10 minutes."
+            title="How to Get Started" 
+            lead="Simple process from download to playing."
           />
           <div class="game-night-steps">
             <For each={gameNightSteps}>
@@ -258,8 +386,8 @@ const PartyGamesPage = () => {
       <section class="section party-comparison">
         <div class="container">
           <SectionHeader 
-            title="This vs That" 
-            lead="See how BeckerBox compares to other ways to host game nights."
+            title="How BeckerBox Compares" 
+            lead=""
           />
           <div class="comparison-table">
             <div class="comparison-row header-row">
@@ -312,8 +440,8 @@ const PartyGamesPage = () => {
       <section class="section party-faq" id="faq">
         <div class="container">
           <SectionHeader 
-            title="Party Game Questions" 
-            lead="Everything you need to know to throw the best game night."
+            title="Common Questions" 
+            lead=""
           />
           <div class="party-faq-grid">
             <For each={partyFaqs}>
@@ -332,9 +460,9 @@ const PartyGamesPage = () => {
       <section class="section slim party-final-cta">
         <div class="container">
           <div class="card cta-card">
-            <h2>Ready to Host Your Best Game Night?</h2>
+            <h2>Ready to Try It?</h2>
             <p>
-              Download BeckerBox now and get your friends together. We've designed everything to be fast, fun, and hassle-free. Your game night starts today.
+              Download BeckerBox and give it a shot. No console required, no expensive controllers. Just your PC and phones.
             </p>
             <div class="cta-buttons">
               <a class="btn primary" href="/download.html">Download BeckerBox</a>
