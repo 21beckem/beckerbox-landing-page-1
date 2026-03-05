@@ -13,7 +13,7 @@ const ThankYouSection = () => {
           <div class="thankyou-content">
             <div class="thankyou-message">
               <p>
-                I hope you enjoyed those nostalgic motion-controlled games and had a blast with your friends.
+                I hope you enjoyed those nostalgic games and had a blast with your friends.
               </p>
               <p>
                 If you'd like to experience BeckerBox whenever you want, you can get it for yourself! It's easy to set up and perfect for game nights with your family.

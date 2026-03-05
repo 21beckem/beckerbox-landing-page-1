@@ -17,7 +17,7 @@ const Testimonials = (props) => {
       name: 'Trey',
     },
     {
-      quote: 'Oh my gosh, this brings back so many good memories.',
+      quote: 'Oh my gosh, this brings back so many good memories!',
       name: 'Price',
     }
   ];
@@ -33,7 +33,7 @@ const Testimonials = (props) => {
             {(entry) => (
               <div class="card">
                 <p class="quote">“{entry.quote}”</p>
-                <p class="person">— {entry.name}</p>
+                <p class="person">~ {entry.name}</p>
               </div>
             )}
           </For>
