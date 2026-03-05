@@ -10,26 +10,30 @@ const gameCategories = [
       {
         name: 'Super Smash Bros. Brawl',
         desc: 'A fast multiplayer fighter that works for both casual play and serious competition.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl',
+        id: 'RSBE01'
       },
       {
         name: 'Mario Kart Wii',
         desc: 'Simple to learn racing with enough depth to stay interesting over many rounds.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+        id: 'RMCE01'
       },
       {
         name: 'Mario Party 8',
         desc: 'Board-game structure plus mini-games keeps competition fun even for mixed skill groups.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Party_8',
+        id: 'RM8E01'
       },
       {
         name: 'Wii Sports Resort',
         desc: 'Motion sports events that feel intuitive and still get competitive quickly.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Sports_Resort',
+        id: 'RZTE01'
       },
     ],
   },
@@ -40,61 +44,69 @@ const gameCategories = [
       {
         name: 'Wii Sports',
         desc: 'Bowling and tennis are still some of the easiest games to hand to new players.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Sports',
+        id: 'RSPE01'
       },
       {
         name: 'Wii Play',
         desc: 'Mini-games with very low learning curve, good for short turns and mixed groups.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Play',
+        id: 'RHAE01'
       },
       {
         name: 'Just Dance (series)',
         desc: 'Good fit for groups that want movement, music, and a relaxed atmosphere.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Just_Dance_(video_game_series)',
+        id: 'SJDE41'
       },
       {
         name: 'Mario Kart Wii',
         desc: 'Still works well in casual mode when you want shorter, lower-stress rounds.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+        id: 'RMCE01'
       },
     ],
   },
   {
-    title: 'Games for 4 Players',
+    title: 'Games for 4',
     description: 'These games handle the full 4-player count and stay fun the entire time.',
     games: [
       {
         name: 'Mario Party 8',
         desc: 'Designed around rotation and mini-games, so 4-player sessions stay active.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Party_8',
+        id: 'RM8E01'
       },
       {
         name: 'Mario Kart Wii',
         desc: 'Quick race length makes it easy to run tournament-style 4-player sets.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+        id: 'RMCE01'
       },
       {
         name: 'Super Smash Bros. Brawl',
         desc: '4-player free-for-all and team options keep everyone involved each match.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl',
+        id: 'RSBE01'
       },
       {
         name: 'Wii Party',
         desc: 'Party-focused structure built for full groups and repeated rounds.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Party',
+        id: 'SUPE01'
       },
     ],
   },
   {
-    title: 'Date Night - 2 Players',
+    title: 'Date Night - 2',
     description: 'Games where you and one other person can actually have fun without a crowd.',
     games: [
       {
@@ -102,24 +114,28 @@ const gameCategories = [
         desc: 'Solid head-to-head racing for a direct two-player session.',
         players: '2 players (recommended)',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+        id: 'RMCE01'
       },
       {
         name: 'Wii Sports (Tennis/Bowling)',
         desc: 'Straightforward two-player matches with very little setup or explanation.',
         players: '2 players (recommended)',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Sports',
+        id: 'RSPE01'
       },
       {
         name: 'Kirby\'s Return to Dream Land',
         desc: 'Co-op platforming that works well when both players want a shared run.',
         players: '2 players (recommended)',
         wiki: 'https://en.wikipedia.org/wiki/Kirby%27s_Return_to_Dream_Land',
+        id: 'SUKE01'
       },
       {
         name: 'Donkey Kong Country Returns',
         desc: 'A good cooperative option if you want challenge and teamwork.',
-        players: '2 players',
+        players: '2',
         wiki: 'https://en.wikipedia.org/wiki/Donkey_Kong_Country_Returns',
+        id: 'SF8E01'
       },
     ],
   },
@@ -130,86 +146,39 @@ const gameCategories = [
       {
         name: 'Wii Sports',
         desc: 'A baseline recommendation because nearly everyone understands it instantly.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Sports',
+        id: 'RSPE01'
       },
       {
         name: 'Mario Kart Wii',
         desc: 'One of the most replayable Wii games with broad appeal for all skill levels.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Kart_Wii',
+        id: 'RMCE01'
       },
       {
         name: 'Super Smash Bros. Brawl',
         desc: 'A long-standing favorite that supports both competitive and casual styles.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl',
+        id: 'RSBE01'
       },
       {
         name: 'Wii Sports Resort',
         desc: 'Expanded sports set with tighter motion controls than the original.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Wii_Sports_Resort',
+        id: 'RZTE01'
       },
       {
         name: 'Mario Party 8',
         desc: 'Still one of the easiest ways to run a full, social game night.',
-        players: '1-4 players',
+        players: '1-4',
         wiki: 'https://en.wikipedia.org/wiki/Mario_Party_8',
+        id: 'RM8E01'
       },
     ],
-  },
-];
-
-const whyBeckerbox = [
-  {
-    icon: 'fa-phone-alt',
-    title: 'Everyone Already Has a Phone',
-    description: 'No need to buy extra controllers. Phones work as controllers.',
-  },
-  {
-    icon: 'fa-bolt',
-    title: 'Setup Takes Minutes',
-    description: 'Scan a QR code, phones connect. You\'re playing in under 5 minutes.',
-  },
-  {
-    icon: 'fa-compact-disc',
-    title: 'Huge Game Library',
-    description: 'Access to all your favorite Wii games. Everything from sports to party games.',
-  },
-  {
-    icon: 'fa-wallet',
-    title: 'Actually Affordable',
-    description: 'One software cost beats buying a $300 console and $60+ per controller.',
-  },
-  {
-    icon: 'fa-gamepad',
-    title: 'Familiar Controls',
-    description: 'Motion controls and button inputs work like the original. No learning curve.',
-  },
-  {
-    icon: 'fa-users-cog',
-    title: 'Built for Groups',
-    description: 'Up to 4 players on phones. Each person controls their own game.',
-  },
-];
-
-const gameNightSteps = [
-  {
-    title: 'Download & Install',
-    copy: 'Get BeckerBox on your PC and launch it.',
-  },
-  {
-    title: 'Connect Your Phones',
-    copy: 'Everyone scans the QR code. Their phone becomes a controller.',
-  },
-  {
-    title: 'Pick a Game',
-    copy: 'Choose from your library and start playing.',
-  },
-  {
-    title: 'That\'s It',
-    copy: 'No setup menus, no configuration. Just play.',
   },
 ];
 
@@ -275,12 +244,7 @@ const PartyGamesPage = () => {
       </section>
 
       {/* Game Categories Section */}
-      <section class="section" id="games">
-        <div class="container">
-          <SectionHeader 
-            title="Best Wii Games for Different Situations" 
-            lead="Wii games work best when you pick the right one for the moment. Here's what works."
-          />
+        <div class="container" id="games">
           <div class="party-game-comparison-wrap">
             <For each={gameCategories}>
               {(category, index) => (
@@ -301,6 +265,7 @@ const PartyGamesPage = () => {
                               <div class="game-meta">
                                 <span><strong>Players:</strong> {game.players}</span>
                                 <a href={game.wiki} target="_blank" rel="noopener noreferrer">Wikipedia</a>
+                                <img src={`https://art.gametdb.com/wii/cover3D/US/${game.id}.png`} alt={`${game.name} cover art placeholder`} />
                               </div>
                             </article>
                           )}
@@ -313,7 +278,7 @@ const PartyGamesPage = () => {
                         <For each={category.games}>
                           {(game, gameIndex) => (
                             <img
-                              src="https://art.gametdb.com/wii/cover3D/US/RSPE01.png"
+                              src={`https://art.gametdb.com/wii/cover3D/US/${game.id}.png`}
                               alt={`${game.name} cover art placeholder`}
                               class="fan-cover"
                               style={{ '--fan-index': gameIndex() }}
@@ -322,7 +287,7 @@ const PartyGamesPage = () => {
                         </For>
                       </div>
                       <p class="cover-disclaimer">
-                        Cover images shown are placeholders for layout preview only. I do not own rights to these images.
+                        Game titles and cover artwork are property of their respective publishers. BeckerBox is not affiliated with or endorsed by these companies.
                       </p>
                     </div>
                   </div>
@@ -331,56 +296,6 @@ const PartyGamesPage = () => {
             </For>
           </div>
         </div>
-      </section>
-
-      {/* Why BeckerBox for Parties */}
-      <section class="section party-features">
-        <div class="container">
-          <SectionHeader 
-            title="Why Use BeckerBox Instead of a Wii" 
-            lead="You probably don't have a Wii anymore. Here's why BeckerBox is a better solution than tracking one down."
-          />
-          <div class="party-features-grid">
-            <For each={whyBeckerbox}>
-              {(feature) => (
-                <div class="party-feature-card">
-                  <div class="feature-icon">
-                    <i class={`fa-solid ${feature.icon}`}></i>
-                  </div>
-                  <h3>{feature.title}</h3>
-                  <p>{feature.description}</p>
-                </div>
-              )}
-            </For>
-          </div>
-        </div>
-      </section>
-
-      {/* How a Game Night Works */}
-      <section class="section party-flow slim-top">
-        <div class="container">
-          <SectionHeader 
-            title="How to Get Started" 
-            lead="Simple process from download to playing."
-          />
-          <div class="game-night-steps">
-            <For each={gameNightSteps}>
-              {(step, index) => (
-                <div class="step-card">
-                  <div class="step-number">{index() + 1}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.copy}</p>
-                  <Show when={index() < gameNightSteps.length - 1}>
-                    <div class="step-arrow">
-                      <i class="fa-solid fa-arrow-down"></i>
-                    </div>
-                  </Show>
-                </div>
-              )}
-            </For>
-          </div>
-        </div>
-      </section>
 
       {/* Comparison vs Alternatives */}
       <section class="section party-comparison">
@@ -397,40 +312,34 @@ const PartyGamesPage = () => {
               <div class="comparison-cell">Board Games</div>
             </div>
             <div class="comparison-row">
-              <div class="comparison-cell label">Initial Cost</div>
-              <div class="comparison-cell">💚 Low</div>
-              <div class="comparison-cell">💔 $400+</div>
-              <div class="comparison-cell">💚 Low</div>
+              <div class="comparison-cell label"><i class="fas fa-dollar-sign comparison-icon cost-icon"></i> Initial Cost</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> Low</div>
+              <div class="comparison-cell"><i class="fas fa-times-circle quality-icon bad"></i> $400+</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon neutral"></i> Moderate</div>
             </div>
             <div class="comparison-row">
-              <div class="comparison-cell label">Setup Time</div>
-              <div class="comparison-cell">✨ Minutes</div>
-              <div class="comparison-cell">⏰ 30 mins</div>
-              <div class="comparison-cell">⏰ 15-20 mins</div>
+              <div class="comparison-cell label"><i class="fas fa-clock comparison-icon time-icon"></i> Setup Time</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> Minutes</div>
+              <div class="comparison-cell"><i class="fas fa-minus-circle quality-icon neutral"></i> 30 mins</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> 15-20 mins</div>
             </div>
             <div class="comparison-row">
-              <div class="comparison-cell label">Game Library</div>
-              <div class="comparison-cell">🔥 Huge</div>
-              <div class="comparison-cell">📦 Limited</div>
-              <div class="comparison-cell">📚 Moderate</div>
+              <div class="comparison-cell label"><i class="fas fa-gamepad comparison-icon library-icon"></i> Game Library</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> Huge</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> Huge</div>
+              <div class="comparison-cell"><i class="fas fa-minus-circle quality-icon neutral"></i> Moderate</div>
             </div>
             <div class="comparison-row">
-              <div class="comparison-cell label">Player Limit</div>
-              <div class="comparison-cell">👥 4 simultaneous</div>
-              <div class="comparison-cell">👥 2-4</div>
-              <div class="comparison-cell">👥 2-4+ (varies)</div>
+              <div class="comparison-cell label"><i class="fas fa-mobile-alt comparison-icon hardware-icon"></i> Extra Hardware?</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> Uses phones</div>
+              <div class="comparison-cell"><i class="fas fa-times-circle quality-icon bad"></i> $30+ per controller</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> Yes</div>
             </div>
             <div class="comparison-row">
-              <div class="comparison-cell label">No Extra Hardware?</div>
-              <div class="comparison-cell">✅ Uses phones</div>
-              <div class="comparison-cell">❌ $60+ per controller</div>
-              <div class="comparison-cell">✅ Yes</div>
-            </div>
-            <div class="comparison-row">
-              <div class="comparison-cell label">Action/Interactive</div>
-              <div class="comparison-cell">🎮 High</div>
-              <div class="comparison-cell">🎮 High</div>
-              <div class="comparison-cell">🛋️ Moderate</div>
+              <div class="comparison-cell label"><i class="fas fa-bolt comparison-icon action-icon"></i> Action/Interactive</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> High</div>
+              <div class="comparison-cell"><i class="fas fa-check-circle quality-icon good"></i> High</div>
+              <div class="comparison-cell"><i class="fas fa-minus-circle quality-icon neutral"></i> Moderate</div>
             </div>
           </div>
         </div>
@@ -457,14 +366,14 @@ const PartyGamesPage = () => {
       </section>
 
       {/* Final CTA */}
-      <section class="section slim party-final-cta">
+      <section class="section slim" id="get-started">
         <div class="container">
-          <div class="card cta-card">
+          <div class="dolphin-final-cta card">
             <h2>Ready to Try It?</h2>
             <p>
               Download BeckerBox and give it a shot. No console required, no expensive controllers. Just your PC and phones.
             </p>
-            <div class="cta-buttons">
+            <div class="buttons">
               <a class="btn primary" href="/download.html">Download BeckerBox</a>
               <a class="btn ghost" href="/about.html">Learn More</a>
             </div>
