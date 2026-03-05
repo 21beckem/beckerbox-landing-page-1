@@ -10,14 +10,12 @@ const comparisons = [
     imageLabel: 'Setup Process',
     dolphinPoints: [
       { type: 'con', text: 'Download and configure Dolphin manually' },
-      { type: 'con', text: 'Manual BIOS file acquisition and placement' },
       { type: 'con', text: 'Configure graphics, audio, and controller settings from scratch' },
       { type: 'neutral', text: 'Requires understanding of emulator concepts' },
       { type: 'con', text: 'Trial and error to find optimal settings' },
     ],
     beckerboxPoints: [
       { type: 'pro', text: 'One-click installer with guided setup wizard' },
-      { type: 'pro', text: 'Automatic system file installation from official sources' },
       { type: 'pro', text: 'Pre-configured optimal settings for typical hardware' },
       { type: 'pro', text: 'Setup focused on "getting to game night fast"' },
       { type: 'pro', text: 'No emulator knowledge required to start' },
@@ -30,15 +28,15 @@ const comparisons = [
     imageLabel: 'Controller Setup',
     dolphinPoints: [
       { type: 'con', text: 'Need physical controllers or manual input mapping' },
-      { type: 'con', text: 'Bluetooth pairing can be inconsistent on PC' },
+      { type: 'con', text: 'Bluetooth requires re-pairing every time' },
       { type: 'con', text: 'Different configuration for each input device type' },
       { type: 'con', text: 'Motion controls require additional hardware or workarounds' },
-      { type: 'neutral', text: 'Advanced customization available for power users' },
+      { type: 'pro', text: 'Advanced customization available for power users' },
     ],
     beckerboxPoints: [
-      { type: 'pro', text: 'Any smartphone becomes a motion controller instantly' },
+      { type: 'pro', text: 'Any smartphone becomes a console controller instantly' },
       { type: 'pro', text: 'Simple QR code scan to connect—no Bluetooth required' },
-      { type: 'pro', text: 'Works with iOS and Android out of the box' },
+      { type: 'pro', text: 'Works with iOS and Android, no app required' },
       { type: 'pro', text: 'Full motion and pointer support built in' },
       { type: 'pro', text: 'Everyone can use their own phone they already own' },
     ],
@@ -76,10 +74,10 @@ const comparisons = [
       { type: 'con', text: 'Not designed for non-technical users to operate alone' },
     ],
     beckerboxPoints: [
-      { type: 'pro', text: 'Launch directly from clean game selection screen' },
+      { type: 'pro', text: 'Launch by clicking "Start"' },
       { type: 'pro', text: 'Controllers reconnect automatically via QR code' },
       { type: 'pro', text: 'Consistent experience across all titles' },
-      { type: 'pro', text: 'Family members can start games without help' },
+      { type: 'pro', text: 'Non-technical family members can start games without help' },
       { type: 'pro', text: 'Minimal clicks from desktop to playing' },
     ],
   },
@@ -92,7 +90,7 @@ const comparisons = [
       { type: 'con', text: 'Need multiple physical controllers' },
       { type: 'con', text: 'Configure each controller port individually' },
       { type: 'con', text: 'Can be expensive if buying multiple controllers' },
-      { type: 'con', text: 'Limited by number of available USB ports or Bluetooth slots' },
+      { type: 'con', text: 'Controller reconnection often requires game restart' },
       { type: 'neutral', text: 'Supports original hardware if you have it' },
     ],
     beckerboxPoints: [
@@ -111,45 +109,43 @@ const comparisons = [
     dolphinPoints: [
       { type: 'neutral', text: 'Deep control over graphics backend and enhancements' },
       { type: 'con', text: 'Requires technical knowledge to optimize' },
-      { type: 'con', text: 'Many options can negatively impact performance if misconfigured' },
       { type: 'neutral', text: 'Best for users who want maximum customization' },
       { type: 'con', text: 'Takes time to find the right balance' },
     ],
     beckerboxPoints: [
-      { type: 'pro', text: 'Automatic performance presets based on your hardware' },
       { type: 'pro', text: 'Optimized defaults that just work for most games' },
       { type: 'pro', text: 'Advanced settings still accessible if wanted' },
       { type: 'pro', text: 'Focus on playability over maximum enhancements' },
       { type: 'pro', text: 'Less troubleshooting, more playing' },
     ],
   },
-  {
-    title: 'Updates & Maintenance',
-    description: 'Keeping your system current and fixing issues.',
-    icon: 'fa-sync-alt',
-    imageLabel: 'Updates',
-    dolphinPoints: [
-      { type: 'neutral', text: 'Manual download and installation of updates' },
-      { type: 'con', text: 'Settings may need reconfiguration after updates' },
-      { type: 'con', text: 'Need to track Dolphin development versions' },
-      { type: 'neutral', text: 'Can choose when to update' },
-      { type: 'con', text: 'Troubleshooting requires community forums and wikis' },
-    ],
-    beckerboxPoints: [
-      { type: 'pro', text: 'Automatic update notifications and installation' },
-      { type: 'pro', text: 'Settings preserved across updates' },
-      { type: 'pro', text: 'Built-in troubleshooting guides and help' },
-      { type: 'pro', text: 'Dedicated support channel for issues' },
-      { type: 'pro', text: 'Less time maintaining, more time playing' },
-    ],
-  },
+  // {
+  //   title: 'Updates & Maintenance',
+  //   description: 'Keeping your system current and fixing issues.',
+  //   icon: 'fa-sync-alt',
+  //   imageLabel: 'Updates',
+  //   dolphinPoints: [
+  //     { type: 'neutral', text: 'Manual download and installation of updates' },
+  //     { type: 'con', text: 'Settings may need reconfiguration after updates' },
+  //     { type: 'con', text: 'Need to track Dolphin development versions' },
+  //     { type: 'neutral', text: 'Can choose when to update' },
+  //     { type: 'con', text: 'Troubleshooting requires community forums and wikis' },
+  //   ],
+  //   beckerboxPoints: [
+  //     { type: 'pro', text: 'Automatic update notifications and installation' },
+  //     { type: 'pro', text: 'Settings preserved across updates' },
+  //     { type: 'pro', text: 'Built-in troubleshooting guides and help' },
+  //     { type: 'pro', text: 'Dedicated support channel for issues' },
+  //     { type: 'pro', text: 'Less time maintaining, more time playing' },
+  //   ],
+  // },
 ];
 
 const faqItems = [
   {
     question: 'Can I still use Dolphin features?',
     answer:
-      'Yes. BeckerBox is built around Dolphin and keeps compatibility while reducing setup complexity for regular play.',
+      '<b>Yes!</b> BeckerBox is built around Dolphin and keeps compatibility while reducing setup complexity for regular play.',
   },
   {
     question: 'Will this work for non-technical family members?',
@@ -171,9 +167,9 @@ const DolphinAlternativePage = () => {
           <div class="dolphin-hero-content">
             <div class="dolphin-hero-text">
               <p class="dolphin-alt-kicker">Dolphin Alternative</p>
-              <h1>A simpler way to play than using Dolphin Emulator alone.</h1>
+              <h1>A simpler way to play</h1>
               <p class="lead">
-                Let's look through the main differences!
+                The Dolphin Emulator is <b>great!</b> In fact, BeckerBox is built as a wrapper around the Dolphin Emulator. But Dolphin's learning curve is steep to get the most out of it. BeckerBox is designed to allow literally anyone with a computer and phone go from zero to gaming in minutes!
               </p>
               <div class="dolphin-alt-cta">
                 <a class="btn primary" href="/download.html">Get BeckerBox</a>
@@ -228,7 +224,7 @@ const DolphinAlternativePage = () => {
             {faqItems.map((item) => (
               <article class="card">
                 <h3>{item.question}</h3>
-                <p>{item.answer}</p>
+                <p innerHTML={item.answer}></p>
               </article>
             ))}
           </div>

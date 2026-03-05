@@ -13,11 +13,13 @@ const ComparisonSection = (props) => {
 
   return (
     <section class={`comparison-section ${props.reverse ? 'reverse' : ''}`}>
+      <div class="header">
+        <h2>{props.title}</h2>
+        <p class="lead">{props.description}</p>
+      </div>
       <div class="comparison-section-content">
         <div class="comparison-section-text">
-          <h2>{props.title}</h2>
-          <p class="comparison-section-lead">{props.description}</p>
-          
+
           <div class="comparison-section-cards">
             <article class="comparison-card dolphin-card">
               <div class="comparison-card-header">

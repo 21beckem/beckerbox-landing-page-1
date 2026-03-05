@@ -26,20 +26,27 @@
   order: 1;
 }
 
-.comparison-section-text h2 {
+.comparison-section .header {
+  display: flex;
+  flex-direction: column;
+}
+.comparison-section .header h2 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   letter-spacing: -0.01em;
   margin-bottom: 12px;
   line-height: 1.15;
 }
-
-.comparison-section-lead {
+.comparison-section .header .lead {
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.65;
   margin-bottom: 28px;
   max-width: 600px;
+}
+.comparison-section.reverse .header {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .comparison-section-cards {
@@ -165,6 +172,13 @@
 
   .comparison-section-media {
     order: -1;
+  }
+
+  .comparison-section .header h2 {
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+  }
+  .comparison-section .header .lead {
+    font-size: 0.98rem;
   }
 }
 
