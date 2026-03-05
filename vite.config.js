@@ -17,7 +17,8 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         tutorials: resolve(__dirname, 'tutorials.html'),
         download: resolve(__dirname, 'download.html'),
-        thankyou: resolve(__dirname, 'thankyou.html')
+        thankyou: resolve(__dirname, 'thankyou.html'),
+        dolphinAlternative: resolve(__dirname, 'dolphin-alternative.html')
       }
     }
   },

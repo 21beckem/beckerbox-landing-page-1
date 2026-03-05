@@ -14,3 +14,10 @@
   font-size: clamp(1.3rem, 2.6vw, 1.7rem);
   color: var(--text);
 }
+
+.bottom-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
