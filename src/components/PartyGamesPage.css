@@ -209,6 +209,7 @@
 }
 
 .game-meta img {
+    display: none;
     position: absolute;
     bottom: 8px;
     right: 10px;
@@ -580,6 +581,16 @@
   .party-game-media {
     display: none;
   }
+  
+  .game-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .game-meta img {
+    display: block;
+  }
 
   .game-night-steps {
     grid-template-columns: 1fr;
@@ -627,12 +638,6 @@
 
   .party-game-row {
     padding: 14px;
-  }
-
-  .game-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
   }
 
   .cover-fan {
