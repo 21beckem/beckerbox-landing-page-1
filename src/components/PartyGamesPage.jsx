@@ -235,7 +235,7 @@ const PartyGamesPage = () => {
             padding-left: 10px;
             background: rgba(25, 194, 101, 0.05);
           ">
-            <p><b>Note:</b> <i>Game titles are property of their respective publishers. BeckerBox is not affiliated with or endorsed by these companies.</i></p>
+            <p><b>Note:</b> <i>BeckerBox does not include games, system firmware, or encryption keys. Use only games you legally own. BeckerBox is not affiliated with or endorsed by console or game publishers. <a href="/about.html" style="color: var(--green-dark); text-decoration: underline;" target="_blank" rel="noopener noreferrer">More Information</a></i></p>
           </div>
         </div>
       </section>
