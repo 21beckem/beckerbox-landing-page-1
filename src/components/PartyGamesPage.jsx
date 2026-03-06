@@ -218,15 +218,7 @@ const PartyGamesPage = () => {
             </div>
             
             <div class="party-hero-visual">
-              <div class="visual-element">
-                <div class="phones-group">
-                  <div class="phone-mock phone-1">📱</div>
-                  <div class="phone-mock phone-2">📱</div>
-                  <div class="phone-mock phone-3">📱</div>
-                  <div class="phone-mock phone-4">📱</div>
-                </div>
-                <div class="visual-label">4 players on phones</div>
-              </div>
+              <img src="images/stick-figures/hero.svg" alt="Party Games" />
             </div>
           </div>
         </div>

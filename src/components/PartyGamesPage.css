@@ -58,63 +58,6 @@
   padding: 20px;
 }
 
-.visual-element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-
-.phones-group {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.phone-mock {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  background: linear-gradient(135deg, var(--green), #5be28d);
-  border: 2px solid white;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(25, 194, 101, 0.3);
-}
-
-.phone-1 {
-  top: 0;
-  left: 0;
-}
-
-.phone-2 {
-  top: 0;
-  right: 0;
-}
-
-.phone-3 {
-  bottom: 0;
-  left: 0;
-}
-
-.phone-4 {
-  bottom: 0;
-  right: 0;
-}
-
-.visual-label {
-  font-weight: 600;
-  color: var(--text);
-  text-align: center;
-  font-size: 0.95rem;
-}
-
 /* Game Categories Section */
 .party-game-comparison-wrap {
   margin-top: 52px;
