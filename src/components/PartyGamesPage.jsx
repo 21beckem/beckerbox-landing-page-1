@@ -132,7 +132,7 @@ const gameCategories = [
     ],
   },
   {
-    title: 'The Classics - Most Popular Wii Games',
+    title: 'The Classics - Most Popular Games',
     description: 'These games are popular for a reason. They\'re the ones everyone remembers playing.',
     img: '/images/stick-figures/classics.svg',
     imgAlt: 'A stick figure character with a glowing crown over its head.',

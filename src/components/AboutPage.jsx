@@ -4,9 +4,9 @@ const sections = [
   {
     title: "What's the story behind this?",
     content:
-    `I used to *love* playing console games with my family when I was a boy! Playing games like baseball, tennis, bowling, swordplay, magic games, role-playing games, and so many more. But then... our console died. We could no longer insert discs, and even more unfortunately, the manufacturer stopped supporting it. We couldn't find a replacement, so eventually we just gave up on playing those games together.
+    `I *loved* playing console games with my family when I was a boy! Playing games like baseball, tennis, bowling, swordplay, magic games, role-playing games, and so many more. But then... our console died. We could no longer insert discs; what's more, the manufacturer stopped supporting it. We couldn't find a replacement, so eventually we just gave up on playing those games together.
       
-    Years later, I discovered something called the Dolphin Emulator which allows you to play those games on your PC! I was so excited and helped my family set it up! You could even pair your old console controllers to your PC. The Dolphin Emulator is amazing, but it does have quite a learning curve. With so many advanced options, it wasn't something my mom could power on without my help. Nevertheless, it was still fun to play again, though it never really caught on with my family.
+    Years later, I discovered something called the Dolphin Emulator which allows you to play those games on your PC! I was so excited and helped my family set it up! You could even pair your old console controllers to your PC. The Dolphin Emulator is amazing, but it does have quite a learning curve. With so many advanced options, it wasn't something my mom could power on without my help. Nevertheless, it was still fun to play again; though it never really caught on with my family.
       
     Fast forward another year, I moved off to college and my family's console remotes stayed with them. I made lots of friends and wanted to share these games with them, but we couldn't play together without the controllers. I tried to find replacements, but second-hand controllers were expensive and unreliable.
 
