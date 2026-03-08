@@ -3,6 +3,9 @@
   max-width: 620px;
   margin: 0 auto;
 }
+.feedback-form-wrapper * {
+  -webkit-tap-highlight-color: transparent;
+}
 
 .feedback-form {
   background: var(--card);
