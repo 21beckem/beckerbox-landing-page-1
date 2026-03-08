@@ -36,7 +36,6 @@
 .thankyou-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .thankyou-message {
@@ -54,6 +53,9 @@
   margin-bottom: 0;
 }
 
+.thankyou-actions {
+  margin-top: 2rem;
+}
 .thankyou-actions h3 {
   text-align: center;
   font-size: 1.5rem;
@@ -153,7 +155,7 @@
   }
 
   .thankyou-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .thankyou-header h1 {
