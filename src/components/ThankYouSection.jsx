@@ -1,4 +1,5 @@
 import './ThankYouSection.css';
+import FeedbackForm from './FeedbackForm';
 
 const ThankYouSection = () => {
   return (
@@ -19,6 +20,8 @@ const ThankYouSection = () => {
                 If you'd like to experience BeckerBox whenever you want, you can get it for yourself! It's easy to set up and perfect for game nights with your family.
               </p>
             </div>
+
+            <FeedbackForm />
 
             <div class="thankyou-actions">
               <h3>What's Next?</h3>
