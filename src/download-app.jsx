@@ -94,7 +94,7 @@ const App = () => {
             <div class="container">
               <div class="card" style={{ 'text-align': 'center', 'margin-bottom': '2rem' }}>
                 <h2 style={{ 'margin-bottom': '1rem' }}>
-                  {isFromURL() ? '✓ Thank you for purchasing BeckerBox!' : 'You already own BeckerBox!'}
+                  {isFromURL() ? '✓ Thank you for purchasing BeckerBox!' : 'You own a BeckerBox license!'}
                 </h2>
                 <p style={{ 'margin-bottom': '1.5rem' }}>
                   {isFromURL() ? 'Your purchase is complete. Download your copy below.' : ''}
@@ -114,6 +114,7 @@ const App = () => {
                     'border-radius': 'var(--radius-sm)',
                     'padding': '0.75rem 1rem',
                     'width': 'fit-content',
+                    'max-width': '100%',
                     'margin': '0 auto'
                   }}>
                     <input 
@@ -128,7 +129,8 @@ const App = () => {
                         'color': 'var(--text)',
                         'outline': 'none',
                         'padding': '0',
-                        'width': 'auto'
+                        'width': '15em',
+                        'text-align': 'center'
                       }}
                     />
                     <button
@@ -170,11 +172,13 @@ const App = () => {
                       'margin-top': '0.85rem',
                       'font-size': '0.95rem',
                       'font-weight': '700',
-                      'color': '#6b3f00',
-                      'transform': 'translateY(0.7rem)'
+                      'color': 'var(--muted)',
+                      'transform': 'translateY(1.25rem)',
+                      'max-width': '600px',
+                      'margin': '0 auto'
                     }}
                   >
-                    Important: Save this key somewhere safe. You will need it to access BeckerBox later.
+                    If you provided your email at checkout, this key should have been emailed to you. But to be on the safe side, I would recommend copying it down and keeping it somewhere safe. You'll need this key verify your purchase after downloading.
                   </p>
                 </div>
               </div>
