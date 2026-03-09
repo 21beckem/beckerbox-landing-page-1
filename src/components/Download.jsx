@@ -53,6 +53,11 @@ const Download = (props) => {
     };
   };
   const openDownloadLink = (el) => {
+    gtag('event', 'download_release', {
+      event_callback: function () {
+        console.log('Download event tracked successfully');
+      }
+    });
     const url = el.currentTarget.getAttribute('href');
     document.getElementById('download-warning').scrollIntoView({ behavior: 'smooth' });
     window.open(url, 'window', 'noopener,noreferrer');
