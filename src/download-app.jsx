@@ -138,6 +138,17 @@ const App = () => {
                       <i class={isCopied() ? 'fas fa-check' : 'fas fa-copy'}></i>
                     </button>
                   </div>
+                  <p
+                    style={{
+                      'margin-top': '0.85rem',
+                      'font-size': '0.95rem',
+                      'font-weight': '700',
+                      'color': '#6b3f00',
+                      'transform': 'translateY(0.7rem)'
+                    }}
+                  >
+                    Important: Save this key somewhere safe. You will need it to access BeckerBox later.
+                  </p>
                 </div>
               </div>
             </div>
