@@ -18,6 +18,7 @@ export default defineConfig({
         tutorials: resolve(__dirname, 'tutorials.html'),
         download: resolve(__dirname, 'download.html'),
         thankyou: resolve(__dirname, 'thankyou.html'),
+        error: resolve(__dirname, 'error.html'),
         dolphinAlternative: resolve(__dirname, 'dolphin-alternative.html'),
         partyGames: resolve(__dirname, 'party-games.html')
       }
