@@ -30,6 +30,14 @@ const App = () => {
     const keyFromURL = urlParams.get('key');
 
     if (keyFromURL) {
+      // they probably just completed a purchase!
+      gtag('event', 'purchase', {
+        key: keyFromURL,
+        timestamp: new Date().toISOString(),
+        event_callback: function () {
+          console.log('Purchase event tracked successfully with key:', keyFromURL);
+        }
+      });
       // Save key to localStorage
       localStorage.setItem('beckerbox_purchase_key', keyFromURL);
       setPurchaseKey(keyFromURL);
