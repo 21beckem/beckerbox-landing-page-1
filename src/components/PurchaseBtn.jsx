@@ -6,7 +6,8 @@ const PurchaseBtn = (props) => {
             new CustomEvent('checkout:open', {
                 detail: {
                     product: props.product,
-                    variant: props.variant
+                    variant: props.variant,
+                    hrefTarget: props.hrefTarget
                 }
             })
         );

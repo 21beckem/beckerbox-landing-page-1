@@ -31,6 +31,7 @@ const PricingCard = (props) => {
             aria-disabled={props.comingSoon ? 'true' : 'false'}
             product={props.product}
             variant={props.variant}
+            hrefTarget={props.hrefTarget}
             text={props.cta}
           />
         </center>

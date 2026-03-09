@@ -5,19 +5,6 @@ import './Pricing.css';
 
 const Pricing = (props) => {
   const tiers = [
-    // {
-    //   title: 'Demo Mode',
-    //   price: '$0',
-    //   period: 'browser',
-    //   description: 'Try the core experience in your browser and test pairing.',
-    //   bullets: ['One remote connection', 'Basic calibration', 'Instant launch'],
-    //   cta: 'Launch Demo',
-    //   href: 'https://r.box.beckersuite.com/v2/host/',
-    //   external: true,
-    //   highlight: false,
-    //   comingSoon: false,
-    //   tag: 'Free',
-    // },
     {
       title: 'Free With Ads',
       price: '$0',
@@ -27,7 +14,7 @@ const Pricing = (props) => {
       cta: 'Coming Soon',
       highlight: false,
       comingSoon: true,
-      tag: 'Coming Soon',
+      tag: 'Coming Soon'
     },
     {
       title: 'Budget',
@@ -41,6 +28,7 @@ const Pricing = (props) => {
       highlight: false,
       comingSoon: false,
       tag: 'Low Cost',
+      hrefTarget: 'https://buy.stripe.com/8x29AV41S3If58kbAc8bS02'
     },
     {
       title: 'Standard',
@@ -54,6 +42,7 @@ const Pricing = (props) => {
       highlight: true,
       comingSoon: false,
       tag: 'Recommended',
+      hrefTarget: 'https://buy.stripe.com/8x2aEZbuk6Ur9oA47K8bS00'
     },
     {
       title: 'Supporter',
@@ -67,6 +56,7 @@ const Pricing = (props) => {
       highlight: false,
       comingSoon: false,
       tag: 'Supporter',
+      hrefTarget: 'https://buy.stripe.com/14A4gBfKAceLfMY9s48bS01'
     },
   ];
 
@@ -91,6 +81,7 @@ const Pricing = (props) => {
                 external={tier.external}
                 highlight={tier.highlight}
                 comingSoon={tier.comingSoon}
+                hrefTarget={tier.hrefTarget}
                 tag={tier.tag}
               />
             )}
