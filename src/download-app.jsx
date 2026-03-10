@@ -57,6 +57,13 @@ const App = () => {
           console.log('Purchase event tracked successfully with key:', keyFromURL);
         }
       });
+      gtag('event', 'PURCHASE', {
+        key: keyFromURL,
+        timestamp: new Date().toISOString(),
+        event_callback: function () {
+          console.log('Purchase event tracked successfully with key:', keyFromURL);
+        }
+      });
       // Save key to localStorage
       localStorage.setItem('beckerbox_purchase_key', keyFromURL);
       setPurchaseKey(keyFromURL);
