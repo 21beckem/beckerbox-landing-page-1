@@ -11,10 +11,15 @@ const Pricing = (props) => {
       period: 'never',
       description: 'If you cannot support me financially, that\'s okay! You can use BeckerBox for free with ads.',
       bullets: ['Full access to all features', 'Ad-supported sessions'],
-      cta: 'Coming Soon',
+      cta: 'Download for free',
+      product: '_',
+      variant: '_',
       highlight: false,
-      comingSoon: true,
-      tag: 'Coming Soon'
+      comingSoon: false,
+      tag: 'Free',
+      onclick: () => {
+        document.getElementById('download').scrollIntoView({ behavior: 'smooth' });
+      }
     },
     {
       title: 'Budget',
@@ -83,6 +88,7 @@ const Pricing = (props) => {
                 comingSoon={tier.comingSoon}
                 hrefTarget={tier.hrefTarget}
                 tag={tier.tag}
+                onclick={tier.onclick}
               />
             )}
           </For>

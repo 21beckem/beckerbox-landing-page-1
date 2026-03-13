@@ -14,22 +14,25 @@ const App = () => {
   const [isCopied, setIsCopied] = createSignal(false);
 
   const handleCheckoutOpen = (event) => {
-    // const product = event.detail?.product ?? null;
-    // setCheckoutProduct(product);
-    // setCheckoutVariant(event.detail?.variant ?? null);
-    // setIsCheckoutOpen(true);
-    gtag('event', 'begin_checkout', {
-      event_callback: function () {
-        console.log('Begin checkout event tracked successfully');
+    let called = false;
+    const callback = () => {
+      if (called) return;
+      called = true;
+      
+      if (event.detail?.hrefTarget)
         window.location.href = event.detail.hrefTarget;
+      else if (event.detail?.onClick && typeof event.detail.onClick === 'function')
+        event.detail.onclick();
+    }
+    gtag('event', 'begin_checkout', {
+      event_callback: () => {
+        console.log('Begin checkout event tracked successfully');
+        callback();
       }
     });
     
     // just in case the callback doesn't fire, we still want to navigate
-    setTimeout(() => {
-      console.warn('Begin checkout event callback did not fire quickly. Navigating to checkout page anyway.');
-      window.location.href = event.detail.hrefTarget;
-    }, 500);
+    setTimeout(callback, 500);
   };
 
   const handleCheckoutClose = () => {

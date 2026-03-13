@@ -33,6 +33,7 @@ const PricingCard = (props) => {
             variant={props.variant}
             hrefTarget={props.hrefTarget}
             text={props.cta}
+            onclick={props.onclick}
           />
         </center>
       </div>
