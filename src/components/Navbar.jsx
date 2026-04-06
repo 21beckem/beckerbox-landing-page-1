@@ -25,7 +25,7 @@ const Navbar = () => {
             <a href="/#faq">FAQ</a>
             <a href="/tutorials.html">Tutorials</a>
             <a href="/contact.html">Contact</a>
-            <a href="/download.html" class="btn primary">Download</a>
+            <a href="/download.html" class="btn primary">Free Download</a>
           </nav>
           <button
             class="nav-menu-btn"
@@ -46,7 +46,7 @@ const Navbar = () => {
           <a href="/#faq">FAQ</a>
           <a href="/tutorials.html">Tutorials</a>
           <a href="/contact.html">Contact</a>
-          <a href="/download.html">Download</a>
+          <a href="/download.html">Free Download</a>
         </nav>
       </div>
       <div class="nav-spacer"></div>

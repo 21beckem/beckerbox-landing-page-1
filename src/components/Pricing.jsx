@@ -19,7 +19,7 @@ const Pricing = (props) => {
       tag: 'Free',
       onclick: () => {
         document.getElementById('download').scrollIntoView({ behavior: 'smooth' });
-      }
+      },
     },
     {
       title: 'Budget',
@@ -33,7 +33,8 @@ const Pricing = (props) => {
       highlight: false,
       comingSoon: false,
       tag: 'Low Cost',
-      hrefTarget: 'https://buy.stripe.com/8x29AV41S3If58kbAc8bS02'
+      hrefTarget: 'https://buy.stripe.com/8x29AV41S3If58kbAc8bS02',
+      btnClass: 'btn ghost'
     },
     {
       title: 'Standard',
@@ -47,7 +48,8 @@ const Pricing = (props) => {
       highlight: true,
       comingSoon: false,
       tag: 'Recommended',
-      hrefTarget: 'https://buy.stripe.com/8x2aEZbuk6Ur9oA47K8bS00'
+      hrefTarget: 'https://buy.stripe.com/8x2aEZbuk6Ur9oA47K8bS00',
+      btnClass: 'btn ghost'
     },
     {
       title: 'Supporter',
@@ -61,7 +63,8 @@ const Pricing = (props) => {
       highlight: false,
       comingSoon: false,
       tag: 'Supporter',
-      hrefTarget: 'https://buy.stripe.com/14A4gBfKAceLfMY9s48bS01'
+      hrefTarget: 'https://buy.stripe.com/14A4gBfKAceLfMY9s48bS01',
+      btnClass: 'btn ghost'
     },
   ];
 
@@ -75,6 +78,7 @@ const Pricing = (props) => {
           <For each={tiers}>
             {(tier) => (
               <PricingCard
+                btnClass={tier.btnClass}
                 title={tier.title}
                 price={tier.price}
                 period={tier.period}

@@ -25,7 +25,7 @@ const PricingCard = (props) => {
         <center>
           <div style="width: 1rem; height: 2rem;"></div>
           <PurchaseBtn
-            class="btn primary"
+            class={props.btnClass ?? 'btn primary'}
             target={props.external ? '_blank' : undefined}
             rel={props.external ? 'noreferrer' : undefined}
             aria-disabled={props.comingSoon ? 'true' : 'false'}
