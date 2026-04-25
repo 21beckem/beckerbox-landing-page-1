@@ -1,6 +1,6 @@
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import DolphinAlternativePage from './components/DolphinAlternativePage';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import DolphinAlternativePage from '../components/DolphinAlternativePage';
 
 const App = () => {
   return (

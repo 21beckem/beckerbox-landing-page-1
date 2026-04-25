@@ -1,9 +1,9 @@
 import { createSignal, onCleanup, onMount } from 'solid-js';
-import Navbar from './components/Navbar';
-import Pricing from './components/Pricing';
-import Download from './components/Download';
-import Footer from './components/Footer';
-import CheckoutOverlay from './components/CheckoutOverlay';
+import Navbar from '../components/Navbar';
+import Pricing from '../components/Pricing';
+import Download from '../components/Download';
+import Footer from '../components/Footer';
+import CheckoutOverlay from '../components/CheckoutOverlay';
 
 const App = () => {
   const [isCheckoutOpen, setIsCheckoutOpen] = createSignal(false);

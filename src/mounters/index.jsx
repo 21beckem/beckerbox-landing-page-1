@@ -1,9 +1,9 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 import 'solid-devtools';
-import './index.css';
+import '../index.css';
 
-import App from './party-games-app';
+import App from '../apps';
 
 const root = document.getElementById('root');
 

@@ -1,6 +1,6 @@
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import PartyGamesPage from './components/PartyGamesPage';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import PartyGamesPage from '../components/PartyGamesPage';
 
 const App = () => {
   return (

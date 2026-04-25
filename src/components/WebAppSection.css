@@ -1,0 +1,139 @@
+.webapp-empty-wrap {
+	display: grid;
+	gap: 18px;
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.webapp-empty-hero {
+	background: linear-gradient(135deg, rgba(25, 194, 101, 0.12), rgba(66, 150, 255, 0.12));
+	border: 1px solid rgba(25, 194, 101, 0.2);
+	box-shadow: 0 16px 34px rgba(10, 40, 25, 0.1);
+	padding: 24px;
+}
+
+.webapp-kicker {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 0.75rem;
+	color: var(--green-dark);
+	font-weight: 700;
+}
+
+.webapp-empty-hero h1 {
+	margin-top: 10px;
+	font-family: 'Space Grotesk', sans-serif;
+	line-height: 1.08;
+	letter-spacing: -0.01em;
+	font-size: clamp(1.85rem, 8vw, 2.4rem);
+}
+
+.webapp-lead {
+	margin-top: 12px;
+	color: var(--muted);
+	line-height: 1.65;
+	font-size: 1rem;
+}
+
+.webapp-badge-row {
+	margin-top: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.webapp-pill {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 999px;
+	font-size: 0.84rem;
+	font-weight: 600;
+	color: var(--green-dark);
+	background: rgba(25, 194, 101, 0.12);
+}
+
+.webapp-cta-row {
+	margin-top: 18px;
+	display: grid;
+	gap: 10px;
+}
+
+.webapp-cta-row .btn {
+	width: 100%;
+	justify-content: center;
+}
+
+.webapp-empty-steps {
+	display: grid;
+	gap: 12px;
+}
+
+.webapp-step {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 14px;
+	align-items: start;
+	padding: 18px;
+}
+
+.webapp-step-num {
+	width: 34px;
+	height: 34px;
+	border-radius: 10px;
+	display: grid;
+	place-items: center;
+	background: rgba(25, 194, 101, 0.15);
+	color: var(--green-dark);
+	font-weight: 700;
+}
+
+.webapp-step h3 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.03rem;
+	margin-bottom: 5px;
+}
+
+.webapp-step p {
+	color: var(--muted);
+	line-height: 1.55;
+	font-size: 0.98rem;
+}
+
+.webapp-empty-help {
+	display: grid;
+	gap: 8px;
+	padding: 18px;
+}
+
+.webapp-empty-help h3 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.05rem;
+}
+
+.webapp-empty-help p {
+	color: var(--muted);
+}
+
+.webapp-empty-help a {
+	color: var(--green-dark);
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	width: fit-content;
+}
+
+@media (min-width: 700px) {
+	.webapp-empty-wrap {
+		gap: 20px;
+	}
+
+	.webapp-empty-hero {
+		padding: 28px;
+	}
+
+	.webapp-cta-row {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}

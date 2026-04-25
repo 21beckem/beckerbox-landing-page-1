@@ -1,6 +1,6 @@
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ThankYouSection from './components/ThankYouSection';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ThankYouSection from '../components/ThankYouSection';
 
 const App = () => {
 
