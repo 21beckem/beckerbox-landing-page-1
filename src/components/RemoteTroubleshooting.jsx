@@ -31,9 +31,8 @@ const RemoteTroubleshooting = () => {
 
 			<div class="remote-troubleshooting-list">
 				<For each={items}>
-					{(item, index) => (
+					{item => (
 						<article class="card remote-troubleshooting-item">
-							<div class="remote-troubleshooting-index">{index() + 1}</div>
 							<div>
 								<h3>{item.title}</h3>
 								<p>{item.help}</p>
